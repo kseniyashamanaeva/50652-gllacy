@@ -10,25 +10,24 @@
       <a class="main-header-logo"><img src="http://placehold.it/150x100" width="150" height="50" alt="Логотип «Gllacy Shop»"></a>
 
       <nav class="main-navigation">
+        <h2 class="visually-hidden">Главное меню</h2>
         <ul class="site-navigation">
-          <li><a href="catalog.html">Каталог</a></li>
+          <li>
+            <a href="catalog.html">Каталог</a>
+            <ul>
+              <li><a href="#"><b>Новинки</b></a></li>
+              <li><a href="catalog.html">Сливочное</a></li>
+              <li><a class="modal-menu-current" href="#">Щербеты</a></li>
+              <li><a href="#">Фруктовый лёд</a></li>
+              <li><a href="#">Мелорин</a></li>
+            </ul>
+          </li>
           <li><a href="delivery.html">Доставка и оплата</a></li>
           <li><a href="info.html">О компании</a></li>
         </ul>
+      </nav>
 
-        <section class="modal modal-menu">
-          <h2 class="visually-hidden">Главное меню</h2>
-          <ul>
-            <li><a href="#"><b>Новинки</b></a></li>
-            <li><a href="catalog.html">Сливочное</a></li>
-            <li><a class="modal-menu-current" href="#">Щербеты</a></li>
-            <li><a href="#">Фруктовый лёд</a></li>
-            <li><a href="#">Мелорин</a></li>
-          </ul>
-        </section>
-
-        <a class="search"><img src="http://placehold.it/20x20" width="10" height="10" alt="Поиск по сайту"></a>
-
+        <a class="search">Поиск</a>
         <section class="modal modal-search">
           <h2 class="visually-hidden">Поиск по сайту</h2>
           <form>
@@ -37,30 +36,31 @@
         </section>
 
         <ul class="user-navigation">
-          <li class="login-link">Вход</li>
-          <li class="basket">Пусто</li>
+          <li><a class="login-link" href="#">Вход</a></li>
+          <li><a class="basket" href="#">Пусто</a></li>
         </ul>
 
         <section class="modal modal-login">
           <h2 class="visually-hidden">Вход</h2>
+          <!-- А зачем здесь ссылка для вызова формы, если она есть выше в user-navigation?
+          Я так поняла, что здесь должна быть только форма, которую я пока не умею делать. Или...? -->
           <!--Форма для авторизации-->
         </section>
 
         <p class="schedule">С 10 до 20, ежедневно</p>
         <p class="phone-number">8 812 450-25-25</p>
-      </nav>
     </header>
 
     <main class="container">
       <h1 class="visually-hidden">Магазин мороженого «Глейси»</h1>
 
-      <h2 class="visually-hidden">Акции</h2>
+      <section class="stock">
+        <h2 class="visually-hidden">Акции</h2>
 
-      <section class="slider">
-        <ul class="slider-list">
-          <li class="slider-item">
+        <ul class="stock-slider-list">
+          <li class="stock-slider-item">
             <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-            <p class="slider-item-image">
+            <p class="stock-slider-item-image">
               <a href="#">
                 <img src="http://placehold.it/1000x1000" width="1000" height="1000" alt="Крем-брюле и пломбир с малиновым джемом">
               </a>
@@ -68,9 +68,9 @@
             <a class="button" href="#">Давайте оба!</a>
           </li>
 
-          <li class="slider-item">
+          <li class="stock-slider-item">
             <h3>Шоколадный пломбир и лимонный сорбет</h3>
-            <p class="slider-item-image">
+            <p class="stock-slider-item-image">
               <a href="#">
                 <img src="http://placehold.it/1000x1000" width="1000" height="1000" alt="Шоколадный пломбир и лимонный сорбет">
               </a>
@@ -78,9 +78,9 @@
             <a class="button" href="#">Давайте оба!</a>
           </li>
 
-          <li class="slider-item">
+          <li class="stock-slider-item">
             <h3>Пломбир с помадкой и клубничный щербет</h3>
-            <p class="slider-item-image">
+            <p class="stock-slider-item-image">
               <a href="#">
                 <img src="http://placehold.it/1000x1000" width="1000" height="1000" alt="Пломбир с помадкой и клубничный щербет">
               </a>
@@ -88,16 +88,20 @@
             <a class="button" href="#">Давайте оба!</a>
           </li>
         </ul>
-      </section>
 
-      <section class="gifts">
-        <ul class="gifts-list">
-          <li class="gifts-item">
+        <ul class="stock-slider-dots">
+          <li class="stock-slider-dots-current"> </li>
+          <li> </li>
+          <li> </li>
+        </ul>
+
+        <ul class="stock-gifts-list">
+          <li class="stock-gifts-item">
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
             <a class="button" href="#">Хочу варенье!</a>
           </li>
-          <li class="gifts-item">
+          <li class="stock-gifts-item">
             <h3>Шоколадки даром!</h3>
             <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
             <a class="button" href="#">Хочу шоколадки!</a>
@@ -111,61 +115,57 @@
         <ul class="hits-list">
           <li class="hits-item">
             <h3>
-              <a href="catalog-item.html">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
+              <a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a>
             </h3>
             <p class="catalog-item-image">
-              <a href="catalog-item.html">
+              <a href="#">
                 <img src="http://placehold.it/200x200" width="50" height="50" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               </a>
             </p>
             <p class="catalog-item-price">
-              <b>310 ₽</b>
-              <b class="weight">/кг</b>
+              310 ₽ <span class="weight">/кг</span>
             </p>
           </li>
 
           <li class="hits-item">
             <h3>
-              <a href="catalog-item.html">Сливочно-кофейное с кусочками шоколада</a>
+              <a href="#">Сливочно-кофейное с кусочками шоколада</a>
             </h3>
             <p class="catalog-item-image">
-              <a href="catalog-item.html">
+              <a href="#">
                 <img src="http://placehold.it/200x200" width="50" height="50" alt="Сливочно-кофейное с кусочками шоколада">
               </a>
             </p>
             <p class="catalog-item-price">
-              <b>380 ₽</b>
-              <b class="weight">/кг</b>
+              380 ₽ <span class="weight">/кг</span>
             </p>
           </li>
 
           <li class="hits-item">
             <h3>
-              <a href="catalog-item.html">Сливочно-клубничное с присыпкой из белого шоколада</a>
+              <a href="#">Сливочно-клубничное с присыпкой из белого шоколада</a>
             </h3>
             <p class="catalog-item-image">
-              <a href="catalog-item.html">
+              <a href="#">
                 <img src="http://placehold.it/200x200" width="50" height="50" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               </a>
             </p>
             <p class="catalog-item-price">
-              <b>355 ₽</b>
-              <b class="weight">/кг</b>
+              355 ₽ <span class="weight">/кг</span>
             </p>
           </li>
 
           <li class="hits-item">
             <h3>
-              <a href="catalog-item.html">Сливочное крем-брюле с карамельной подливкой</a>
+              <a href="#">Сливочное крем-брюле с карамельной подливкой</a>
             </h3>
             <p class="catalog-item-image">
-              <a href="catalog-item.html">
+              <a href="#">
                 <img src="http://placehold.it/200x200" width="50" height="50" alt="Сливочное крем-брюле с карамельной подливкой">
               </a>
             </p>
             <p class="catalog-item-price">
-              <b>415 ₽</b>
-              <b class="weight">/кг</b>
+              415 ₽ <span class="weight">/кг</span>
             </p>
           </li>
         </ul>
@@ -196,11 +196,16 @@
 
       <section class="contacts">
         <h2 class="visually-hidden">Контактная информация</h2>
-        <p class="contacts-small">Адрес главного офиса и офлайн-магазина:</p>
-        <p class="contacts-bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</p>
-        <p class="contacts-small">Для заказов по телефону:</p>
-        <p class="contacts-bold">8 812 450-25-25</p>
-        <p class="contacts-small">(с 10 до 20 ежедневно)</p>
+
+        <p class="main-contacts">
+          Адрес главного офиса<br>
+          и офлайн-магазина:<br>
+          <span class="main-contacts-bold">ул. Большая Конюшенная 19/8, Санкт-Петербург</span><br>
+          Для заказов по телефону:<br>
+          <span class="main-contacts-bold">8 812 450-25-25</span><br>
+          (с 10 до 20 ежедневно)
+        </p>
+
         <a class="button" href="#">Форма обратной связи</a>
         <img src="http://placehold.it/1000x500" width="1000" height="500" alt="Расположение магазина «Gllacy» на карте">
       </section>
@@ -208,6 +213,7 @@
       <section class="modal modal-message">
         <h2>Мы обязательно вам ответим!</h2>
         <!--Форма для обратной связи-->
+        <span class="modal-close">х</span>
       </section>
     </main>
 
