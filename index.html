@@ -48,11 +48,11 @@
         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label class="visually-hidden" for="user-email">Электронная почта</label>
-            <input class="login-email" id="user-email" type="text" name="email" placeholder="Электронная почта">
+            <input class="login-email" id="user-email" type="text" name="email" value="" placeholder="Электронная почта">
           </p>
           <p>
             <label class="visually-hidden" for="user-password">Пароль</label>
-            <input class="login-password" id="user-password" type="password" name="password" placeholder="Пароль">
+            <input class="login-password" id="user-password" type="password" name="password" value="" placeholder="Пароль">
           </p>
           <button class="button" type="submit">Войти</button>
           <a class="restore" href="#">Забыли пароль?</a>
@@ -97,9 +97,9 @@
         </ul>
 
         <ul class="stock-slider-dots">
-          <li class="stock-slider-dots-current">1</li>
-          <li>2</li>
-          <li>3</li>
+          <li><button class="stock-slider-dots-current" type="button">Слайд 1</button></li>
+          <li><button type="button">Слайд 2</button></li>
+          <li><button type="button">Слайд 3</button></li>
         </ul>
 
         <ul class="stock-gifts-list">
@@ -226,9 +226,7 @@
           </p>
           <p class="message-item">
             <label class="visually-hidden" for="message-question">Ваше сообщение</label>
-            <textarea id="message-question" name="question" rows="7" cols="30">
-              Напишите что-нибудь...
-            </textarea>
+            <textarea id="message-question" name="question" rows="7" cols="30" placeholder="Напишите что-нибудь..."></textarea>
           </p>
           <button class="button" type="submit">Отправить</button>
           <button class="modal-close" type="button">Закрыть</button>

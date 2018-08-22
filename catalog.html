@@ -50,11 +50,11 @@
         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
             <label class="visually-hidden" for="user-email">Электронная почта</label>
-            <input class="login-email" id="user-email" type="text" name="email" placeholder="Электронная почта">
+            <input class="login-email" id="user-email" type="text" name="email" value="" placeholder="Электронная почта">
           </p>
           <p>
             <label class="visually-hidden" for="user-password">Пароль</label>
-            <input class="login-password" id="user-password" type="password" name="password" placeholder="Пароль">
+            <input class="login-password" id="user-password" type="password" name="password" value="" placeholder="Пароль">
           </p>
           <button class="button" type="submit">Войти</button>
           <a class="restore" href="#">Забыли пароль?</a>
@@ -67,30 +67,26 @@
         <form class="basket-form" action="https://echo.htmlacademy.ru" method="post">
           <ul class="basket-list">
             <li class="basket-item">
-              <a href="#">
-                <h3>Пломбир с апельсиновым джемом</h3>
-                <p class="basket-item-image">
-                  <img src="img/ice_creame_1.1.jpg" width="50" height="50" alt="Пломбир с апельсиновым джемом">
-                </p>
-              </a>
+              <h3>Пломбир с апельсиновым джемом</h3>
+              <p class="basket-item-image">
+                <img src="img/ice_creame_1.1.jpg" width="50" height="50" alt="Пломбир с апельсиновым джемом">
+              </p>
               <p class="basket-item-value">1,5 кг х 200 руб.</p>
               <p class="basket-item-value">300 руб.</p>
               <button class="modal-close" type="button">Закрыть</button>
             </li>
             <li class="basket-item">
-              <a href="#">
-                <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
-                <p class="basket-item-image">
-                  <img src="img/ice_creame_1.3.jpg" width="50" height="50" alt="Клубничный пломбир с присыпкой из белого шоколада">
-                </p>
-              </a>
+              <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
+              <p class="basket-item-image">
+                <img src="img/ice_creame_1.3.jpg" width="50" height="50" alt="Клубничный пломбир с присыпкой из белого шоколада">
+              </p>
               <p class="basket-item-value">1,5 кг х 300 руб.</p>
               <p class="basket-item-value">450 руб.</p>
               <button class="modal-close" type="button">Закрыть</button>
             </li>
           </ul>
           <p class="basket-list-total">Итого: 750 руб.</p>
-          <button class="button" type="submit">Оформить заказ</button>
+          <a class="button" href="#">Оформить заказ</a>
         </form>
       </section>
 
@@ -110,24 +106,15 @@
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filter" method="get" action="https://htmlacademy.ru">
-          <fieldset>
-            <legend>Сортировка:</legend>
-            <label>
-              <input class="filtr-option" list="sorting" placeholder="по популярности">
-            </label>
-            <datalist id="sorting">
-              <option class="filtr-option-current" value="по популярности">по популярности</option>
-              <option value="сначала недорогие">сначала недорогие</option>
-              <option value="сначала дорогие">сначала дорогие</option>
-              <option value="по жирности">по жирности</option>
-            </datalist>
-          </fieldset>
-          <fieldset>
-            <legend>Цена: 100 руб. - 500 руб.</legend>
-            <label>
-              <input type="range" name="radio">
-            </label>
-          </fieldset>
+          <label for="filter-sorting">Сортировка:</label>
+          <select name="sorting" id="filter-sorting">
+            <option class="filtr-option-current" value="по популярности">по популярности</option>
+            <option value="сначала недорогие">сначала недорогие</option>
+            <option value="сначала дорогие">сначала дорогие</option>
+            <option value="по жирности">по жирности</option>
+          </select>
+          <label for="filter-price">Цена: 100 руб. - 500 руб.</label>
+          <input type="range" name="radio" id="filter-price">
           <fieldset>
             <legend>Жирность:</legend>
             <ul>
