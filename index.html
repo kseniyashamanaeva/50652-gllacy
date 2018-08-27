@@ -14,10 +14,10 @@
 
       <nav class="main-navigation">
         <h2 class="visually-hidden">Главное меню</h2>
-        <ul class="site-navigation">
+        <ul class="site-navigation list-style">
           <li>
             <a href="#">Каталог</a>
-            <ul class="catalog-drop">
+            <ul class="catalog-drop list-style">
               <li><a href="#"><b>Новинки</b></a></li>
               <li><a href="catalog.html">Сливочное</a></li>
               <li><a href="#">Щербеты</a></li>
@@ -35,13 +35,13 @@
         <h2 class="visually-hidden">Поиск по сайту</h2>
         <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
           <p>
-            <label class="visually-hidden" for="search-user">Окно поиска</label>
-            <input id="search-user" type="text" name="search" placeholder="Что ищем?">
+            <label class="visually-hidden" for="search-id">Окно поиска</label>
+            <input type="search" name="search" id="search-id" placeholder="Что ищем?">
          </p>
         </form>
       </section>
 
-      <ul class="user-navigation">
+      <ul class="user-navigation list-style">
         <li><a class="login-link" href="#">Вход</a></li>
         <li><a class="basket" href="#">Пусто</a></li>
       </ul>
@@ -50,12 +50,12 @@
         <h2 class="visually-hidden">Вход</h2>
         <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
           <p>
-            <label class="visually-hidden" for="user-email">Электронная почта</label>
-            <input class="login-email" id="user-email" type="text" name="email" value="" placeholder="Электронная почта">
+            <label class="visually-hidden" for="login-email-id">Электронная почта</label>
+            <input class="login-email" type="text" name="email" id="login-email-id" value="" placeholder="Электронная почта" required>
           </p>
           <p>
-            <label class="visually-hidden" for="user-password">Пароль</label>
-            <input class="login-password" id="user-password" type="password" name="password" value="" placeholder="Пароль">
+            <label class="visually-hidden" for="login-password-id">Пароль</label>
+            <input class="login-password" type="password" name="password" id="login-password-id" value="" placeholder="Пароль" required>
           </p>
           <button class="button" type="submit">Войти</button>
           <a class="restore" href="#">Забыли пароль?</a>
@@ -73,7 +73,7 @@
       <section class="stock">
         <h2 class="visually-hidden">Акции</h2>
 
-        <ul class="slider-list">
+        <ul class="slider-list list-style">
           <li class="slider-item">
             <h3>Крем-брюле и пломбир с малиновым джемом</h3>
             <p class="slider-item-image">
@@ -97,13 +97,13 @@
           </li>
         </ul>
 
-        <ul class="slider-dots">
+        <ul class="slider-dots list-style">
           <li><button class="slider-dots-current" type="button">Слайд 1</button></li>
           <li><button type="button">Слайд 2</button></li>
           <li><button type="button">Слайд 3</button></li>
         </ul>
 
-        <ul class="gifts-list">
+        <ul class="gifts-list list-style">
           <li class="gifts-raspberries">
             <h3>Малинка даром!</h3>
             <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
@@ -120,14 +120,14 @@
       <section class="hits">
         <h2 class="visually-hidden">Хиты</h2>
 
-        <ul class="hits-list">
+        <ul class="hits-list list-style">
           <li class="hits-item">
             <h3><a href="#">Сливочное с апельсиновым джемом и цитрусовой стружкой</a></h3>
             <p class="catalog-image">
               <img src="img/ice-cream1.1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             </p>
             <p class="catalog-price">
-              310  <span class="weight">/кг</span>
+              310 ₽ <span class="weight">/кг</span>
             </p>
           </li>
 
@@ -137,7 +137,7 @@
               <img src="img/ice-cream1.2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
             </p>
             <p class="catalog-price">
-              380  <span class="weight">/кг</span>
+              380 ₽ <span class="weight">/кг</span>
             </p>
           </li>
 
@@ -147,7 +147,7 @@
               <img src="img/ice-cream1.3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             </p>
             <p class="catalog-price">
-              355  <span class="weight">/кг</span>
+              355 ₽ <span class="weight">/кг</span>
             </p>
           </li>
 
@@ -157,7 +157,7 @@
               <img src="img/ice-cream1.4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             </p>
             <p class="catalog-price">
-              415  <span class="weight">/кг</span>
+              415 ₽ <span class="weight">/кг</span>
             </p>
           </li>
         </ul>
@@ -167,7 +167,7 @@
         <h2 class="visually-hidden">Преимущества</h2>
         <h3>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
 
-        <ul class="features-list">
+        <ul class="features-list list-style">
           <li class="features-item">Всё наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
           <li class="features-item">Для изготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</li>
           <li class="features-item">Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
@@ -185,8 +185,8 @@
         <p class="subscription-info">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно=)</p>
         <form class="subscription-form" action="https://echo.htmlacademy.ru" method="post">
           <p class="subscription-item">
-            <label class="visually-hidden" for="subscription-email">Адрес электронной почты</label>
-            <input id="subscription-email" type="text" name="email" value="" placeholder="Электронная почта">
+            <label class="visually-hidden" for="subscription-id">Адрес электронной почты</label>
+            <input type="text" name="email" id="subscription-id" value="" placeholder="Электронная почта">
           </p>
           <button class="button" type="submit">Отправить</button>
         </form>
@@ -210,16 +210,16 @@
         <h2>Мы обязательно вам ответим!</h2>
         <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
           <p class="message-item">
-            <label class="visually-hidden" for="message-name">Ваше имя</label>
-            <input id="message-name" type="text" name="name" value="" placeholder="Как вас зовут?">
+            <label class="visually-hidden" for="message-name-id">Ваше имя</label>
+            <input type="text" name="name" id="message-name-id" value="" placeholder="Как вас зовут?">
           </p>
           <p class="message-item">
-            <label class="visually-hidden" for="message-email">Электронная почта</label>
-            <input id="message-email" type="text" name="email" value="" placeholder="Ваша почта для ответа?">
+            <label class="visually-hidden" for="message-email-id">Электронная почта</label>
+            <input type="text" name="email" id="message-email-id" value="" placeholder="Ваша почта для ответа?">
           </p>
           <p class="message-item">
-            <label class="visually-hidden" for="message-question">Ваше сообщение</label>
-            <textarea id="message-question" name="question" rows="7" cols="30" placeholder="Напишите что-нибудь..."></textarea>
+            <label class="visually-hidden" for="message-question-id">Ваше сообщение</label>
+            <textarea name="message" id="message-question-id" cols="50" rows="5" placeholder="Напишите что-нибудь..."></textarea>
           </p>
           <button class="button" type="submit">Отправить</button>
           <button class="modal-close" type="button">Закрыть</button>
@@ -229,7 +229,7 @@
 
     <footer class="main-footer">
       <div class="footer-socials">
-        <ul>
+        <ul class="list-style">
           <li><a class="social-button" href="#">Твиттер</a></li>
           <li><a class="social-button" href="#">Инстаграм</a></li>
           <li><a class="social-button" href="#">Фейсбук</a></li>
@@ -238,7 +238,7 @@
       </div>
 
       <div class="footer-info">
-        <ul>
+        <ul class="list-style">
           <li><a class="suppliers" href="#">Для поставщиков</a></li>
           <li><a href="#">О производстве</a></li>
           <li><a href="#">Наши документы</a></li>

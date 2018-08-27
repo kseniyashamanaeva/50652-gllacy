@@ -12,6 +12,10 @@ a {
   text-decoration: none;
 }
 
+.list-style {
+  list-style: none;
+}
+
 .button {
   font-size: 18px;
   font-weight: 700;
@@ -19,7 +23,7 @@ a {
   color: #ffffff;
   text-align: center;
   background-color: #f16442;
-  background-image: linear-gradient( 90deg, rgb(202,56,36) 0%, rgb(242,104,67) 100%);
+  background-image: linear-gradient(#f26843, #ca3824);
   box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
   border: none;
 }
@@ -28,16 +32,14 @@ a {
 .button:hover,
 .button:focus {
   color: fefefe;
-  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.004);
-  border: none;
+  background-image: linear-gradient(#f58669, #ec6f5e);
+  box-shadow: 0px 1px 2px 0px #ac1000;
 }
 
 .button:active {
   color: #fceeec;
-  background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
-  border: none;
+  background-image: linear-gradient(#e74a35, #f26843);
+  box-shadow: inset 0px 2px 2px 0px #942718;
 }
 
 .modal {
@@ -46,17 +48,34 @@ a {
   background-color: #f8f7f4;
 }
 
+.modal input,
+.subscription-item input,
+.modal-message textarea {
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  background-color: #ffffff;
+  border: 1px solid rgba(178, 178, 178, 0.52);
+}
+
+.modal input:hover,
+.subscription-item input:hover,
+.modal-message textarea:hover {
+  border: 2px solid rgba(154, 154, 154, 0.52);
+}
+
+.modal input:focus,
+.subscription-item input:focus,
+.modal-message textarea:focus {
+  border: 2px solid rgba(46, 136, 228, 0.52);
+}
+
 .main-navigation {
   font-weight: 700;
   line-height: 18px;
   color: #ffffff;
   background-color: #849d8f;
-}
-
-.site-navigation,
-.catalog-drop,
-.user-navigation {
-  list-style: none;
 }
 
 .site-navigation a,
@@ -69,18 +88,18 @@ a {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.site-navigation a:hover,
+.site-navigation > li > a:hover,
 .site-navigation a:focus {
   color: #333333;
   text-decoration: none;
   background-color: #f7f6f3;
 }
 
-.site-navigation a:active {
+.site-navigation > li > a:active {
   color: #333333;
   text-decoration: none;
   background-color: rgba(248, 247, 244, 0.988);
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+  box-shadow: inset 0px 2px 1px 0px #696969;
 }
 
 .catalog-drop a {
@@ -88,7 +107,7 @@ a {
 }
 
 li:hover .catalog-drop a {
-  display: inline;
+  display: block;
 }
 
 .catalog-drop {
@@ -112,31 +131,14 @@ li:hover .catalog-drop a {
 }
 
 .search {
-  background-color: rgba(161, 180, 169, 0.2);
+  background-color: rgba(248, 247, 244, 0.2);
 }
 
 .search:hover,
 .search:focus {
   font-weight: 500;
   color: #323232;
-  background-color: #f7f6f3;
-}
-
-.modal-search {
-  color: #999999;
-}
-
-.modal-search input {
-  font: inherit;
-  border-color: #d3d3d2;
-}
-
-.modal-search input:hover {
-  border-color: #c7c6c5;
-}
-
-.modal-search input:focus {
-  border-color: #8fbdec;
+  background-color: #f8f7f4;
 }
 
 .user-navigation {
@@ -146,31 +148,18 @@ li:hover .catalog-drop a {
 }
 
 .user-navigation a {
-  background-color: rgba(161, 180, 169, 0.2);
+  background-color: rgba(248, 247, 244, 0.2);
 }
 
 .user-navigation a:hover,
 .user-navigation a:focus {
   font-weight: 500;
   color: #323232;
-  background-color: #f7f6f3;
+  background-color: #f8f7f4;
 }
 
 .modal-login {
   color: #999999;
-}
-
-.modal-login input {
-  font: inherit;
-  border-color: #d3d3d2;
-}
-
-.modal-login input:hover {
-  border-color: #c7c6c5;
-}
-
-.modal-login input:focus {
-  border-color: #8fbdec;
 }
 
 .modal-login a {
@@ -202,7 +191,6 @@ li:hover .catalog-drop a {
 }
 
 .slider-item {
-  list-style: none;
   text-align: center;
 }
 
@@ -219,29 +207,24 @@ li:hover .catalog-drop a {
   color: #ffffff;
   text-align: center;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
+  background-image: linear-gradient(#f26843, #e74a35);
   box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
 }
 
 .slider-item .button:hover,
 .slider-item .button:focus {
   color: #ffffff;
-  background-image: linear-gradient( 90deg, rgb(231,74,53) 0%, rgb(242,104,67) 100%);
-  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.004);
+  background-image: linear-gradient(#f58669, #ec6f5e);
+  box-shadow: 0px 2px 2px 0px #ac1000;
 }
 
 .slider-item .button:active {
   color: #fceeec;
-  background-image: linear-gradient( 90deg, rgb(242,104,67) 0%, rgb(231,74,53) 100%);
-  box-shadow: inset 0px 2px 2px 0px rgba(148, 39, 24, 0.004);
-}
-
-.slider-dots li {
-  list-style: none;
+  background-image: linear-gradient(#e74a35, #f26843);
+  box-shadow: inset 0px 2px 2px 0px #942718;
 }
 
 .gifts-list {
-  list-style: none;
   font-weight: 700;
 }
 
@@ -275,7 +258,6 @@ li:hover .catalog-drop a {
 }
 
 .hits-list {
-  list-style: none;
   background-color: #849d8f;
 }
 
@@ -312,10 +294,6 @@ li:hover .catalog-drop a {
   background-image: url("../img/wafer.jpg");
   background-repeat: no-repeat;
   background-position: center;
-}
-
-.features-list {
-  list-style: none;
 }
 
 .features h3 {
@@ -369,18 +347,6 @@ li:hover .catalog-drop a {
   line-height: 22px;
 }
 
-.subscription-item input {
-  font: inherit;
-}
-
-.subscription-item input:hover {
-  border-color: #c7c6c5;
-}
-
-.subscription-item input:focus {
-  border-color: #8fbdec;
-}
-
 .contacts {
   font-size: 14px;
   font-weight: 400;
@@ -402,32 +368,12 @@ li:hover .catalog-drop a {
   color: #323232;
 }
 
-.modal-message input,
-.modal-message textarea {
-  font: inherit;
-  border-color: #d3d3d2;
-}
-
-.modal-message input:hover,
-.modal-message textarea:hover {
-  border-color: #c7c6c5;
-}
-
-.modal-message input:focus,
-.modal-message textarea:focus {
-  border-color: #8fbdec;
-}
-
 .main-footer {
   font-size: 13px;
   font-weight: 400;
   line-height: 18px;
   color: #ffffff;
   background-color: #849d8f;
-}
-
-.main-footer li {
-  list-style: none;
 }
 
 .main-footer a {
@@ -457,7 +403,10 @@ a.suppliers {
   font-size: 12px;
 }
 
-.footer-copyright > a {
+.footer-copyright > a,
+.footer-copyright > a:hover,
+.footer-copyright > a:focus,
+.footer-copyright > a:active {
   border-bottom: none;
 }
 
@@ -485,10 +434,6 @@ a.navigation-current:focus {
   font-weight: inherit;
 }
 
-.modal-basket li {
-  list-style: none;
-}
-
 .modal-basket span {
   color: #999999;
 }
@@ -503,7 +448,6 @@ a.navigation-current:focus {
   font-size: 14px;
   font-weight: 400;
   line-height: 16px;
-  list-style: none;
 }
 
 .breadcrumbs a {
@@ -540,7 +484,6 @@ a.navigation-current:focus {
 .filter ul {
   font-size: 16px;
   line-height: 18px;
-  list-style: none;
 }
 
 .filter select {
@@ -583,26 +526,25 @@ a.navigation-current:focus {
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  color: #fbfcfb;
+  color: #ffffff;
   border-style: solid;
   border-width: 2px;
-  border-color: #fbfcfb;
+  border-color: #ffffff;
   background-color: #9cb0a4;
 }
 
 .filter-button:hover,
 .filter-button:focus {
-  color: #353535;
+  color: #323232;
   background-color: #fbfcfb;
 }
 
 .filter-button:active {
   background-color: #eaeaea;
-  box-shadow: inset 0px 2px 1px 0px rgba(105, 105, 105, 0.004);
+  box-shadow: inset 0px 2px 1px 0px #696969;
 }
 
 .catalog-list {
-  list-style: none;
   background-color: #849d8f;
 }
 
@@ -624,15 +566,17 @@ a.navigation-current:focus {
   border-bottom: 1px solid rgba(255, 188, 158, 0.3);
 }
 
+.catalog-item .button {
+  color: #ffffff;
+  background-image: linear-gradient(#f26843, #e74a35);
+  box-shadow: 0px 1px 2px 0px #ac1000;
+}
+
 .catalog-item:hover,
 .catalog-item:focus {
   background-color: rgba(248, 247, 244, 0.2);
   border-radius: 5px;
   box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
-}
-
-.pagination-list {
-  list-style: none;
 }
 
 .pagination-list a {
@@ -645,7 +589,7 @@ a.navigation-current:focus {
 .pagination-list a:hover,
 .pagination-list a:focus {
   color: #ffffff;
-  background-color: rgba(157, 177, 165, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination-list a:active {
@@ -661,16 +605,16 @@ a.navigation-current:focus {
 .pagination-current a:hover,
 .pagination-current a:focus {
   color: #ffffff;
-  background-color: rgba(157, 177, 165, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination-not-active a {
-  color: rgba(157, 177, 165, 0.2);
+  color: rgba(255, 255, 255, 0.2);
 }
 
 .pagination-not-active a:hover,
 .pagination-not-active a:focus,
 .pagination-not-active a:active {
-  color: rgba(157, 177, 165, 0.2);
+  color: rgba(255, 255, 255, 0.2);
   background-color: transparent;
 }
