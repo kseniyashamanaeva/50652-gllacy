@@ -68,6 +68,7 @@ a {
 .modal input:focus,
 .subscription-item input:focus,
 .modal-message textarea:focus {
+  outline: none;
   border: 2px solid rgba(46, 136, 228, 0.52);
 }
 
@@ -574,9 +575,9 @@ a.navigation-current:focus {
 
 .catalog-item:hover,
 .catalog-item:focus {
-  background-color: rgba(248, 247, 244, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.08);
 }
 
 .pagination-list a {
