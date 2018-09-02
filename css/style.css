@@ -926,7 +926,178 @@ body {
 
 /* Сетки страницы каталога */
 
-.container {
+.inner-page .main-header {
+  margin-bottom: 0;
+}
+
+.breadcrumbs {
+  width: 293px;
+  min-height: 16px;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 0;
+  padding-right: 50px;
+  display: flex;
+}
+
+.breadcrumbs li {
+  padding-right: 22px;
+}
+
+.container h1 {
+  width: 560px;
+  min-width: 38;
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0;
+}
+
+.filters {
+  width: 860px;
+  min-height: 133px;
+}
+
+.filter {
+  margin: 0;
+  margin-bottom: 40px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.filter-sorting {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-sorting .legend {
+  width: 163px;
+  min-height: 16px;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 16px;
+  padding: 0;
+}
+
+.filter-sorting select {
+  width: 193px;
+  min-height: 36px;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.filter-price {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-price .legend {
+  width: 182px;
+  min-height: 16px;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  padding: 0;
+}
+
+.filter-price input {
+  width: 218px;
+  min-height: 36px;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+}
+
+.filter-fat {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-fat legend {
+  width: 103px;
+  min-height: 16px;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 15px;
+  padding: 0;
+}
+
+.filter-fat ul {
+  width: 415px;
+  min-height: 36px;
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-wrapper {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.filter-filler {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.filter-filler legend {
+  width: 251px;
+  min-height: 16px;
+  margin: 0;
+  margin-bottom: 5px;
+  margin-left: 16px;
+  padding: 0;
+}
+
+.filter-filler ul {
+  width: 702px;
+  min-height: 36px;
+  margin: 0;
+  margin-right: 14px;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.filter-button {
+  width: 144px;
+  height: 36px;
+  margin: 0;
+  margin-top: 21px;
+  padding: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .container {
   padding: 0 27px;
 }
 
@@ -975,4 +1146,4 @@ body {
   display: flex;
   justify-content: space-between;
   margin-left: 955px;
-}
+} */
