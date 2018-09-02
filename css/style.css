@@ -719,12 +719,25 @@ body {
 }
 
 .schedule {
+  margin: 0;
+  margin-left: 981px;
+  padding: 0;
   width: 267px;
   height: 45px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.schedule-time {
+  margin: 0;
+  padding: 0;
+}
+
+.schedule-phone {
+  margin: 0;
+  padding: 0;
 }
 
 .container {
@@ -792,6 +805,10 @@ body {
 
 .hits-item .catalog-price {
   margin-top: -70px;
+}
+
+.hits-item .button {
+  order: 2;
 }
 
 .features {
@@ -871,10 +888,11 @@ body {
   display: flex;
 }
 
-.footer-socials .list-style {
+.footer-socials ul {
   width: 267px;
   height: 38px;
   margin: 0;
+  margin-right: 123px;
   padding: 0;
   padding-right: 80px;
   display: flex;
@@ -887,20 +905,30 @@ body {
 }
 
 .footer-info {
-  width: 305px;
-  height: 40px;
+  width: 360px;
+  min-height: 35px;
   margin: 0;
-  padding: 0;
-  margin-left: 155px;
-  margin-right: 125px;
+  margin-top: -15px;
+  margin-right: 123px;
   display: flex;
-  flex-wrap: wrap;
 }
 
-.footer-info .list-style {
+.footer-info:first-child {
+  width: 170px;
   margin: 0;
   padding: 0;
-  padding-right: 26px;
+  padding-left: 32px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-info:last-child {
+  width: 170px;
+  margin: 0;
+  padding: 0;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: column;
 }
 
 .footer-copyright {
@@ -908,20 +936,9 @@ body {
   height: 60px;
   margin: 0;
   padding: 0;
-  margin-top: 20px;
+  margin-top: -15px;
   margin-left: auto;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Сетки страницы каталога */
@@ -1082,68 +1099,73 @@ body {
   padding: 0;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* .container {
-  padding: 0 27px;
-}
-
-.breadcrumbs {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 5px;
-}
-
-.filter {
-  display: flex;
-  flex-wrap: wrap;
-  width: 855px;
-}
-
 .catalog {
   width: 1146px;
+  margin: 0;
+  padding: 0;
 }
 
 .catalog-list {
+  margin: 0;
+  margin-bottom: 80px;
+  padding: 0;
   display: flex;
   flex-wrap: wrap;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 75px;
 }
 
 .catalog-item {
   width: 267px;
+  min-height: 323px;
+  margin: 0;
+  margin-bottom: 40px;
   margin-right: 26px;
-  margin-bottom: 35px;
+  padding: 0;
   display: flex;
   flex-direction: column;
-}
-
-.catalog-item h3 {
-  order: 1;
+  justify-content: center;
 }
 
 .catalog-item:nth-child(4n) {
   margin-right: 0;
 }
 
+.catalog-item h3 {
+  width: 257px;
+  min-height: 55px;
+  margin: 0;
+  margin-top: 10px;
+  margin-bottom: 18px;
+  padding: 0;
+  order: 1;
+}
+
+.catalog-item .catalog-price {
+  margin: 0;
+  margin-top: -70px;
+  padding: 0;
+}
+
+.catalog-image {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
+}
+
+.catalog-item .button {
+  margin: 0;
+  padding: 0;
+  order: 2;
+}
+
 .pagination-list {
   width: 190px;
+  margin: 0;
+  margin-left: 956px;
+  padding: 0;
   display: flex;
   justify-content: space-between;
-  margin-left: 955px;
-} */
+}
+
+.inner-page .main-footer {
+  margin-top: 30px;
+}
