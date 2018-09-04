@@ -98,7 +98,6 @@ input[type="radio"].visually-hidden {
   font-weight: 700;
   line-height: 18px;
   color: #ffffff;
-  background-color: #849d8f;
 }
 
 .site-navigation a,
@@ -287,10 +286,6 @@ li:hover .catalog-drop a {
   background-position: center;
 }
 
-.hits-list {
-  background-color: #849d8f;
-}
-
 .hits-item a {
   font-size: 16px;
   font-weight: 500;
@@ -312,10 +307,18 @@ li:hover .catalog-drop a {
   font-weight: 700;
   line-height: 45px;
   color: #ffffff;
+  text-shadow: 0px 1px 3px rgba(49, 50, 53, 0.5);
 }
 
 .catalog-price span {
   font-size: 30px;
+}
+
+.hits-item:hover,
+.hits-item:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  box-shadow: 0px 20px 20px 0px rgba(0, 0, 0, 0.08);
 }
 
 .features {
@@ -526,14 +529,14 @@ a.navigation-current:focus {
 .filter select {
   font: inherit;
   color: #ffffff;
-  background-color: rgba(157, 177, 165, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
   border: none;
 }
 
 .filter select:hover,
 .filter select:focus {
   color: #323232;
-  background-color: rgba(157, 177, 165, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .filter select:active {
@@ -556,7 +559,7 @@ a.navigation-current:focus {
 }
 
 .filter ul {
-  background-color: rgba(170, 187, 177, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .filter-button {
@@ -567,11 +570,12 @@ a.navigation-current:focus {
   border-style: solid;
   border-width: 2px;
   border-color: #ffffff;
-  background-color: #9cb0a4;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .filter-button:hover,
 .filter-button:focus {
+  outline: none;
   color: #323232;
   background-color: #fbfcfb;
 }
@@ -579,10 +583,6 @@ a.navigation-current:focus {
 .filter-button:active {
   background-color: #eaeaea;
   box-shadow: inset 0px 2px 1px 0px #696969;
-}
-
-.catalog-list {
-  background-color: #849d8f;
 }
 
 .catalog-item h3 {
@@ -657,112 +657,166 @@ a.navigation-current:focus {
 }
 
 
-/* Сетка */
-
-html,
-body {
-  min-width: 1200px;
-  min-height: 1650px;
-}
+/* Сетка главной страницы */
 
 .main-header {
-  margin-bottom: 280px;
+  width: 1146px;
+  margin: 0 auto;
+  margin-bottom: 350px;
+  padding: 0 27px;
+  outline: 1px solid pink;
 }
 
-.header-wrapper {
-  display: flex;
-  align-items: center;
-  padding: 0 27px;
+.navigation-block {
+  display: inline-block;
+  outline: 1px solid pink;
 }
 
 .main-header-logo {
+  display: inline-block;
+  float: left;
   width: 154px;
   height: 64px;
   margin: 0;
-  padding: 10px 25px 0 0;
+  margin-right: 10px;
+  padding: 0;
+  padding-top: 10px;
+  outline: 1px solid pink;
 }
 
 .main-navigation {
-  width: 380px;
-  margin: 0;
-  margin-right: 320px;
-  padding: 0;
+  display: inline-block;
 }
 
 .site-navigation {
   margin: 0;
   padding: 0;
   padding-top: 30px;
-  padding-bottom: 25px;
   display: flex;
-  justify-content: space-between;
+  outline: 1px solid pink;
 }
 
-.search {
-  width: 33px;
-  height: 33px;
-  margin: 23px 9px 18px 23px;
+.site-navigation li {
+  margin: 0;
+  padding: 0;
+  margin: 0 14px;
+}
+
+.user-block {
+  position: relative;
+  width: 267px;
+  float: right;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 23px;
+  outline: 1px solid pink;
 }
 
 .user-navigation {
-  width: 203px;
-  height: 32px;
   margin: 0;
   padding: 0;
-  padding-top: 23px;
-  padding-bottom: 18px;
-  display: flex;
+  outline: 1px solid pink;
 }
 
+.user-navigation li {
+  display: inline-block;
+}
+
+.search,
 .login-link {
-  margin-right: 9px;
+  margin-right: 10px;
 }
 
 .schedule {
-  margin: 0;
-  margin-left: 981px;
-  padding: 0;
-  width: 267px;
-  height: 45px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
+  position: absolute;
+  right: 0;
+  top: 50px;
+  text-align: right;
+  outline: 1px solid pink;
 }
 
 .schedule-time {
   margin: 0;
+  margin-top: 20px;
   padding: 0;
 }
 
 .schedule-phone {
   margin: 0;
   padding: 0;
+  padding-top: 5px;
 }
 
 .container {
   width: 1146px;
   margin: 0 auto;
   padding: 0 27px;
+  outline: 1px solid pink;
 }
 
-/* временно до оживления */
-.slider-item:nth-child(2),
-.slider-item:nth-child(3) {
-  display: none;
+.sliders {
+  width: 1146px;
+  margin-bottom: 40px;
+}
+
+.slider-list {
+  margin: 0;
+  padding: 0;
+	text-align: center;
 }
 
 .slider-item {
+  display: none;
+}
+
+.slider-item.current {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  outline: 1px solid pink;
+}
+
+.slider-item h3 {
+  width: 707px;
+  margin: 0;
+  margin-bottom: 27px;
+  padding: 0;
+  outline: 1px solid pink;
+}
+
+.slider-image {
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  margin: 0;
+  max-width: 1146px;
+  margin: 0 auto;
+}
+
+.slider-dots {
+  width: 90px;
+  margin: 0;
+  margin-top: -42px;
+  padding: 0;
+  display: flex;
+  outline: 1px solid pink;
+}
+
+.slider-dots li {
+  margin: 0;
+  padding: 0;
+  padding-right: 8px;
+}
+
+.gifts {
+  max-width: 1146px;
+  margin-bottom: 40px;
+  outline: 1px solid pink;
 }
 
 .gifts-list {
-  width: 1146px;
   margin: 0;
-  margin-bottom: 40px;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -771,18 +825,19 @@ body {
 .gifts-raspberries,
 .gifts-chocolate {
   width: 560px;
-  min-height: 230px;
   margin: 0;
   padding: 0;
+  outline: 1px solid pink;
 }
 
 .hits {
   width: 1146px;
+  margin-bottom: 40px;
+  outline: 1px solid pink;
 }
 
 .hits-list {
   margin: 0;
-  margin-bottom: 40px;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -792,19 +847,43 @@ body {
   width: 267px;
   min-height: 322px;
   margin: 0;
+  margin-right: 26px;
   padding: 0;
   display: flex;
   flex-direction: column;
+  outline: 1px solid pink;
+}
+
+.hits-item:last-child {
+  margin-right: 0;
 }
 
 .hits-item h3 {
   margin: 0;
+  margin-top: 15px;
+  margin-bottom: 18px;
   padding: 0;
   order: 1;
+  text-align: center;
+  outline: 1px solid pink;
+}
+
+.catalog-image {
+  margin: 0;
+  padding: 0;
+}
+
+.catalog-image img {
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
 }
 
 .hits-item .catalog-price {
+  margin: 0;
   margin-top: -70px;
+  padding: 0;
+  outline: 1px solid pink;
 }
 
 .hits-item .button {
@@ -812,9 +891,10 @@ body {
 }
 
 .features {
-  width: 1146px;
+  max-width: 1146px;
   min-height: 307px;
   margin-bottom: 40px;
+  outline: 1px solid pink;
 }
 
 .features-wrapper {
@@ -830,6 +910,7 @@ body {
   padding: 0;
   display: flex;
   flex-wrap: wrap;
+  outline: 1px solid pink;
 }
 
 .features-item {
@@ -838,16 +919,18 @@ body {
   padding: 0;
   padding-bottom: 25px;
   padding-left: 57px;
+  outline: 1px solid pink;
 }
 
 .news-wrapper {
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
-  width: 1146px;
+  max-width: 1146px;
   min-height: 220px;
   display: flex;
   justify-content: space-between;
+  outline: 1px solid pink;
 }
 
 .news,
@@ -855,62 +938,86 @@ body {
   margin: 0;
   padding: 0;
   width: 560px;
+  outline: 1px solid pink;
 }
 
 .contacts {
-  display: flex;
-  align-items: center;
-  margin: 0;
+  position: relative;
+  margin: 0 -27px;
   padding: 0;
+  outline: 1px solid pink;
 }
 
 .map {
   margin: 0;
   padding: 0;
   width: 1200px;
-  height: 430px;
 }
 
 .contacts-info {
-  margin: 0;
-  margin-left: -150px;
-  padding: 0;
-  width: 302px;
+  position: absolute;
+	top: 62px;
+	right: 27px;
+	width: 302px;
   height: 305px;
+  z-index: 1;
+  outline: 1px solid pink;
 }
 
 .main-footer {
-  margin: 0;
-  padding: 35px 27px 30px 27px;
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+  outline: 1px solid pink;
 }
 
-.main-footer .container {
+.footer-wrapper {
+  margin: 0;
+  padding: 18px 0 26px 0;
   display: flex;
+  justify-content: space-between;
+  outline: 1px solid pink;
+}
+
+.footer-socials {
+  margin: 0;
+  padding: 0;
+  padding-top: 18px;
+  max-width: 267px;
+  display: inline-block;
+  outline: 1px solid pink;
 }
 
 .footer-socials ul {
-  width: 267px;
-  height: 38px;
+  width: 186px;
   margin: 0;
-  margin-right: 123px;
   padding: 0;
-  padding-right: 80px;
   display: flex;
   justify-content: space-between;
+  outline: 1px solid pink;
 }
 
 .social-button {
+  margin: 0;
+  padding: 0;
   width: 38px;
   height: 38px;
+  outline: 1px solid pink;
 }
 
 .footer-info {
-  width: 360px;
-  min-height: 35px;
+  max-width: 612px;
   margin: 0;
-  margin-top: -15px;
-  margin-right: 123px;
+  padding: 0;
+  padding-top: 18px;
   display: flex;
+  justify-content: center;
+  outline: 1px solid pink;
+}
+
+.footer-info ul {
+  margin-top: 0;
+  padding-top: 0;
 }
 
 .footer-info:first-child {
@@ -920,6 +1027,7 @@ body {
   padding-left: 32px;
   display: flex;
   flex-direction: column;
+  outline: 1px solid pink;
 }
 
 .footer-info:last-child {
@@ -929,54 +1037,69 @@ body {
   padding-left: 5px;
   display: flex;
   flex-direction: column;
+  outline: 1px solid pink;
 }
 
 .footer-copyright {
-  width: 190px;
-  height: 60px;
+  width: 267px;
   margin: 0;
   padding: 0;
-  margin-top: -15px;
-  margin-left: auto;
+  outline: 1px solid pink;
 }
 
+.footer-copyright img {
+  float: right;
+  padding-right: 81px;
+  outline: 1px solid pink;
+}
+
+.footer-copyright p {
+  margin: 0;
+  padding: 0;
+  float: right;
+  outline: 1px solid pink;
+}
 
 /* Сетки страницы каталога */
 
 .inner-page .main-header {
-  margin-bottom: 0;
+  margin-bottom: 30px;
 }
 
 .breadcrumbs {
-  width: 293px;
+  width: 1146px;
   min-height: 16px;
   margin: 0;
   margin-bottom: 5px;
   padding: 0;
   padding-right: 50px;
   display: flex;
+  outline: 1px solid pink;
 }
 
 .breadcrumbs li {
   padding-right: 22px;
+  outline: 1px solid pink;
 }
 
 .container h1 {
-  width: 560px;
+  width: 1146px;
   min-width: 38;
   margin: 0;
   margin-bottom: 27px;
   padding: 0;
+  outline: 1px solid pink;
 }
 
 .filters {
   width: 860px;
   min-height: 133px;
+  margin-bottom: 40px;
+  outline: 1px solid pink;
 }
 
 .filter {
   margin: 0;
-  margin-bottom: 40px;
   padding: 0;
   display: flex;
   justify-content: space-between;
@@ -988,6 +1111,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  outline: 1px solid pink;
 }
 
 .filter-sorting .legend {
@@ -997,6 +1121,7 @@ body {
   margin-bottom: 5px;
   margin-left: 16px;
   padding: 0;
+  outline: 1px solid pink;
 }
 
 .filter-sorting select {
@@ -1012,6 +1137,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  outline: 1px solid pink;
 }
 
 .filter-price .legend {
@@ -1021,6 +1147,7 @@ body {
   margin-bottom: 5px;
   margin-left: 15px;
   padding: 0;
+  outline: 1px solid pink;
 }
 
 .filter-price input {
@@ -1036,6 +1163,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  outline: 1px solid pink;
 }
 
 .filter-fat legend {
@@ -1045,6 +1173,7 @@ body {
   margin-bottom: 5px;
   margin-left: 15px;
   padding: 0;
+  outline: 1px solid pink;
 }
 
 .filter-fat ul {
@@ -1062,6 +1191,7 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
+  outline: 1px solid pink;
 }
 
 .filter-filler {
@@ -1069,6 +1199,7 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
+  outline: 1px solid pink;
 }
 
 .filter-filler legend {
@@ -1078,6 +1209,7 @@ body {
   margin-bottom: 5px;
   margin-left: 16px;
   padding: 0;
+  outline: 1px solid pink;
 }
 
 .filter-filler ul {
@@ -1102,12 +1234,13 @@ body {
 .catalog {
   width: 1146px;
   margin: 0;
+  margin-bottom: 80px;
   padding: 0;
+  outline: 1px solid pink;
 }
 
 .catalog-list {
   margin: 0;
-  margin-bottom: 80px;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
@@ -1123,6 +1256,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  outline: 1px solid pink;
 }
 
 .catalog-item:nth-child(4n) {
@@ -1130,31 +1264,28 @@ body {
 }
 
 .catalog-item h3 {
-  width: 257px;
   min-height: 55px;
   margin: 0;
-  margin-top: 10px;
+  margin-top: 15px;
   margin-bottom: 18px;
   padding: 0;
   order: 1;
+  text-align: center;
+  outline: 1px solid pink;
 }
 
 .catalog-item .catalog-price {
   margin: 0;
   margin-top: -70px;
   padding: 0;
-}
-
-.catalog-image {
-  margin: 0;
-  margin-bottom: 10px;
-  padding: 0;
+  outline: 1px solid pink;
 }
 
 .catalog-item .button {
   margin: 0;
   padding: 0;
   order: 2;
+  outline: 1px solid pink;
 }
 
 .pagination-list {
@@ -1164,6 +1295,7 @@ body {
   padding: 0;
   display: flex;
   justify-content: space-between;
+  outline: 1px solid pink;
 }
 
 .inner-page .main-footer {

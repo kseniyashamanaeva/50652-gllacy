@@ -10,7 +10,7 @@
   <body>
 
     <header class="main-header">
-      <div class="header-wrapper">
+      <div class="navigation-block">
         <a class="main-header-logo"><img src="img/logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»"></a>
 
         <nav class="main-navigation">
@@ -30,7 +30,9 @@
             <li><a href="#">О Компании</a></li>
           </ul>
         </nav>
+      </div>
 
+      <div class="user-block">
         <a class="search" href="#">Поиск</a>
         <section class="modal modal-search">
           <h2 class="visually-hidden">Поиск по сайту</h2>
@@ -38,7 +40,7 @@
             <p>
               <label class="visually-hidden" for="search-id">Окно поиска</label>
               <input type="search" name="search" id="search-id" placeholder="Что ищем?">
-           </p>
+            </p>
           </form>
         </section>
 
@@ -63,13 +65,13 @@
             <a class="registration" href="#">Новая регистрация</a>
           </form>
         </section>
-      </div>
 
-      <section class="schedule">
-        <h2 class="visually-hidden">Для заказов по телефону</h2>
-        <p class="schedule-time">С 10 до 20, ежедневно</p>
-        <p class="schedule-phone">8 812 450-25-25</p>
-      </section>
+        <section class="schedule">
+          <h2 class="visually-hidden">Для заказов по телефону</h2>
+          <p class="schedule-time">С 10 до 20, ежедневно</p>
+          <p class="schedule-phone">8 812 450-25-25</p>
+        </section>
+      </div>
     </header>
 
     <main class="container">
@@ -78,48 +80,51 @@
       <section class="stock">
         <h2 class="visually-hidden">Акции</h2>
 
-        <ul class="slider-list list-style">
-          <li class="slider-item">
-            <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-            <p class="slider-item-image">
-              <img src="img/slider1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
-            </p>
-            <a class="button" href="#">Давайте оба!</a>
-          </li>
-          <li class="slider-item">
-            <h3>Шоколадный пломбир и лимонный сорбет</h3>
-            <p class="slider-item-image">
-              <img src="img/slider2.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
-            </p>
-            <a class="button" href="#">Давайте оба!</a>
-          </li>
-          <li class="slider-item">
-            <h3>Пломбир с помадкой и клубничный щербет</h3>
-            <p class="slider-item-image">
-              <img src="img/slider3.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
-            </p>
-            <a class="button" href="#">Давайте оба!</a>
-          </li>
-        </ul>
+        <section class="sliders">
+          <ul class="slider-list list-style">
+            <li class="slider-item current">
+              <h3>Крем-брюле и пломбир с малиновым джемом</h3>
+              <p class="slider-image">
+                <img src="img/slider1.png" width="1045" height="881" alt="Крем-брюле и пломбир с малиновым джемом">
+              </p>
+              <a class="button" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider-item">
+              <h3>Шоколадный пломбир и лимонный сорбет</h3>
+              <p class="slider-image">
+                <img src="img/slider2.png" width="1065" height="859" alt="Шоколадный пломбир и лимонный сорбет">
+              </p>
+              <a class="button" href="#">Давайте оба!</a>
+            </li>
+            <li class="slider-item">
+              <h3>Пломбир с помадкой и клубничный щербет</h3>
+              <p class="slider-image">
+                <img src="img/slider3.png" width="1079" height="854" alt="Пломбир с помадкой и клубничный щербет">
+              </p>
+              <a class="button" href="#">Давайте оба!</a>
+            </li>
+          </ul>
+          <ul class="slider-dots list-style">
+            <li><button class="current" type="button">Слайд 1</button></li>
+            <li><button type="button">Слайд 2</button></li>
+            <li><button type="button">Слайд 3</button></li>
+          </ul>
+        </section>
 
-        <ul class="slider-dots list-style">
-          <li><button class="slider-dots-current" type="button">Слайд 1</button></li>
-          <li><button type="button">Слайд 2</button></li>
-          <li><button type="button">Слайд 3</button></li>
-        </ul>
-
-        <ul class="gifts-list list-style">
-          <li class="gifts-raspberries">
-            <h3>Малинка даром!</h3>
-            <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-            <a class="button" href="#">Хочу варенье!</a>
-          </li>
-          <li class="gifts-chocolate">
-            <h3>Шоколадки даром!</h3>
-            <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
-            <a class="button" href="#">Хочу шоколадки!</a>
-          </li>
-        </ul>
+        <section class="gifts">
+          <ul class="gifts-list list-style">
+            <li class="gifts-raspberries">
+              <h3>Малинка даром!</h3>
+              <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+              <a class="button" href="#">Хочу варенье!</a>
+            </li>
+            <li class="gifts-chocolate">
+              <h3>Шоколадки даром!</h3>
+              <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно бесплатно.</p>
+              <a class="button" href="#">Хочу шоколадки!</a>
+            </li>
+          </ul>
+        </section>
       </section>
 
       <section class="hits">
@@ -134,6 +139,7 @@
             <p class="catalog-price">
               310 ₽ <span class="weight">/кг</span>
             </p>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
 
           <li class="hits-item">
@@ -144,6 +150,7 @@
             <p class="catalog-price">
               380 ₽ <span class="weight">/кг</span>
             </p>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
 
           <li class="hits-item">
@@ -154,6 +161,7 @@
             <p class="catalog-price">
               355 ₽ <span class="weight">/кг</span>
             </p>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
 
           <li class="hits-item">
@@ -164,6 +172,7 @@
             <p class="catalog-price">
               415 ₽ <span class="weight">/кг</span>
             </p>
+            <a class="button" href="#">Быстрый просмотр</a>
           </li>
         </ul>
       </section>
@@ -239,7 +248,7 @@
     </main>
 
     <footer class="main-footer">
-      <div class="container">
+      <div class="footer-wrapper">
         <div class="footer-socials">
           <ul class="list-style">
             <li><a class="social-button" href="#">Твиттер</a></li>
