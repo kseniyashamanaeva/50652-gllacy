@@ -39,40 +39,49 @@
         </div>
 
         <div class="user-block">
-          <a class="search" href="#"><span class="visually-hidden">Поиск</span>
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
-          </a>
-          <section class="modal modal-search">
-            <h2 class="visually-hidden">Поиск по сайту</h2>
-            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-              <p>
-                <label class="visually-hidden" for="search-id">Окно поиска</label>
-                <input type="search" name="search" id="search-id" placeholder="Что ищем?">
-              </p>
-            </form>
-          </section>
+          <div class="search-wrapper">
+            <a class="search" href="#"><span class="visually-hidden">Поиск</span>
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
+            </a>
+            <section class="modal modal-search">
+              <h2 class="visually-hidden">Поиск по сайту</h2>
+              <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+                <p>
+                  <label class="visually-hidden" for="search-id">Окно поиска</label>
+                  <input type="search" name="search" id="search-id" placeholder="Что ищем?">
+                </p>
+              </form>
+            </section>
+          </div>
 
           <ul class="user-navigation list-style">
-            <li><a class="login-link" href="#">Вход</a></li>
-            <li><a class="basket" href="#">Пусто</a></li>
+            <li class="login-wrapper">
+              <a class="login-link" href="#">Вход</a>
+              <section class="modal modal-login">
+                <h2 class="visually-hidden">Вход</h2>
+                <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                  <p>
+                    <label class="visually-hidden" for="login-email-id">Электронная почта</label>
+                    <input class="login-email" type="text" name="email" id="login-email-id" value="" placeholder="Электронная почта" required>
+                  </p>
+                  <p>
+                    <label class="visually-hidden" for="login-password-id">Пароль</label>
+                    <input class="login-password" type="password" name="password" id="login-password-id" value="" placeholder="Пароль" required>
+                  </p>
+                  <div class="entrance-wrapper">
+                    <button class="button" type="submit">Войти</button>
+                    <div class="registration">
+                      <a href="#">Забыли пароль?</a>
+                      <a href="#">Новая регистрация</a>
+                    </div>
+                  </div>
+                </form>
+              </section>
+            </li>
+            <li class="basket-wrapper">
+              <a class="basket" href="#">Пусто</a>
+            </li>
           </ul>
-
-          <section class="modal modal-login">
-            <h2 class="visually-hidden">Вход</h2>
-            <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-              <p>
-                <label class="visually-hidden" for="login-email-id">Электронная почта</label>
-                <input class="login-email" type="text" name="email" id="login-email-id" value="" placeholder="Электронная почта" required>
-              </p>
-              <p>
-                <label class="visually-hidden" for="login-password-id">Пароль</label>
-                <input class="login-password" type="password" name="password" id="login-password-id" value="" placeholder="Пароль" required>
-              </p>
-              <button class="button" type="submit">Войти</button>
-              <a class="restore" href="#">Забыли пароль?</a>
-              <a class="registration" href="#">Новая регистрация</a>
-            </form>
-          </section>
         </div>
 
         <section class="call">

@@ -11,7 +11,7 @@
 
     <header class="main-header">
       <div class="navigation-block">
-        <a class="main-header-logo"><img src="img/logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»"></a>
+        <a class="main-header-logo" href="index.html"><img src="img/logo.svg" width="154" height="64" alt="Логотип «Gllacy Shop»"></a>
 
         <nav class="main-navigation">
           <h2 class="visually-hidden">Главное меню</h2>
@@ -33,68 +33,76 @@
       </div>
 
       <div class="user-block">
-        <a class="search" href="#"><span class="visually-hidden">Поиск</span>
-          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
-        </a>
-        <section class="modal modal-search">
-          <h2 class="visually-hidden">Поиск по сайту</h2>
-          <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
-            <p>
-              <label class="visually-hidden" for="search-id">Окно поиска</label>
-              <input type="search" name="search" id="search-id" placeholder="Что ищем?">
-           </p>
-          </form>
-        </section>
+        <div class="search-wrapper">
+          <a class="search" href="#"><span class="visually-hidden">Поиск</span>
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17" viewBox="0 0 17 17"><path fill="#ffffff" d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z"/></svg>
+          </a>
+          <section class="modal modal-search">
+            <h2 class="visually-hidden">Поиск по сайту</h2>
+            <form class="search-form" action="https://echo.htmlacademy.ru" method="get">
+              <p>
+                <label class="visually-hidden" for="search-id">Окно поиска</label>
+                <input type="search" name="search" id="search-id" placeholder="Что ищем?">
+              </p>
+            </form>
+          </section>
+        </div>
 
         <ul class="user-navigation list-style">
-          <li><a class="login-link" href="#">Вход</a></li>
-          <li><a class="basket basket-current" href="#">2 товара</a></li>
+          <li class="login-wrapper">
+            <a class="login-link" href="#">Вход</a>
+            <section class="modal modal-login">
+              <h2 class="visually-hidden">Вход</h2>
+              <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
+                <p>
+                  <label class="visually-hidden" for="login-email-id">Электронная почта</label>
+                  <input class="login-email" type="text" name="email" id="login-email-id" value="" placeholder="Электронная почта" required>
+                </p>
+                <p>
+                  <label class="visually-hidden" for="login-password-id">Пароль</label>
+                  <input class="login-password" type="password" name="password" id="login-password-id" value="" placeholder="Пароль" required>
+                </p>
+                <div class="entrance-wrapper">
+                  <button class="button" type="submit">Войти</button>
+                  <div class="registration">
+                    <a href="#">Забыли пароль?</a>
+                    <a href="#">Новая регистрация</a>
+                  </div>
+                </div>
+              </form>
+            </section>
+          </li>
+          <li class="basket-wrapper">
+            <a class="basket basket-current" href="#">2 товара</a>
+            <section class="modal modal-basket">
+              <h2 class="visually-hidden">Товары в корзине</h2>
+              <form class="basket-form" action="https://echo.htmlacademy.ru" method="post">
+                <ul class="basket-list list-style">
+                  <li class="basket-item">
+                    <h3>Пломбир с апельсиновым джемом</h3>
+                    <p class="basket-image">
+                      <img src="img/ice-cream1.1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
+                    </p>
+                    <p class="basket-value">1,5 кг х <span>200 руб.</span></p>
+                    <p class="basket-value">300 руб.</p>
+                    <button class="modal-close" type="button">Закрыть</button>
+                  </li>
+                  <li class="basket-item">
+                    <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
+                    <p class="basket-image">
+                      <img src="img/ice-cream1.3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
+                    </p>
+                    <p class="basket-value">1,5 кг х <span>300 руб.</span></p>
+                    <p class="basket-value">450 руб.</p>
+                    <button class="modal-close" type="button">Закрыть</button>
+                  </li>
+                </ul>
+                <p class="basket-total">Итого: 750 руб.</p>
+                <a class="button" href="#">Оформить заказ</a>
+              </form>
+            </section>
+          </li>
         </ul>
-
-        <section class="modal modal-login">
-          <h2 class="visually-hidden">Вход</h2>
-          <form class="login-form" action="https://echo.htmlacademy.ru" method="post">
-            <p>
-              <label class="visually-hidden" for="login-email-id">Электронная почта</label>
-              <input class="login-email" type="text" name="email" id="login-email-id" value="" placeholder="Электронная почта" required>
-            </p>
-            <p>
-              <label class="visually-hidden" for="login-password-id">Пароль</label>
-              <input class="login-password" type="password" name="password" id="login-password-id" value="" placeholder="Пароль" required>
-            </p>
-            <button class="button" type="submit">Войти</button>
-            <a class="restore" href="#">Забыли пароль?</a>
-            <a class="registration" href="#">Новая регистрация</a>
-          </form>
-        </section>
-
-        <section class="modal modal-basket">
-          <h2 class="visually-hidden">Товары в корзине</h2>
-          <form class="basket-form" action="https://echo.htmlacademy.ru" method="post">
-            <ul class="basket-list list-style">
-              <li class="basket-item">
-                <h3>Пломбир с апельсиновым джемом</h3>
-                <p class="basket-image">
-                  <img src="img/ice-cream1.1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-                </p>
-                <p class="basket-value">1,5 кг х <span>200 руб.</span></p>
-                <p class="basket-value">300 руб.</p>
-                <button class="modal-close" type="button">Закрыть</button>
-              </li>
-              <li class="basket-item">
-                <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
-                <p class="basket-image">
-                  <img src="img/ice-cream1.3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
-                </p>
-                <p class="basket-value">1,5 кг х <span>300 руб.</span></p>
-                <p class="basket-value">450 руб.</p>
-                <button class="modal-close" type="button">Закрыть</button>
-              </li>
-            </ul>
-            <p class="basket-total">Итого: 750 руб.</p>
-            <a class="button" href="#">Оформить заказ</a>
-          </form>
-        </section>
       </div>
 
       <section class="call">
@@ -106,8 +114,8 @@
 
     <main class="container">
       <ul class="breadcrumbs list-style">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="#">Каталог</a></li>
+        <li><a href="index.html">Главная</a>»</li>
+        <li><a href="#">Каталог</a>»</li>
         <li>Сливочное</li>
       </ul>
 
@@ -118,16 +126,20 @@
         <form class="filter" action="https://htmlacademy.ru" method="get">
           <div class="filter-sorting">
             <label class="legend" for="filter-sorting-id">Сортировка:</label>
-            <select name="sorting" id="filter-sorting-id">
-              <option value="по популярности">по популярности</option>
-              <option value="сначала недорогие">сначала недорогие</option>
-              <option value="сначала дорогие">сначала дорогие</option>
-              <option value="по жирности">по жирности</option>
-            </select>
+            <div class="sorting-select">
+              <select name="sorting" id="filter-sorting-id">
+                <option value="по популярности">по популярности</option>
+                <option value="сначала недорогие">сначала недорогие</option>
+                <option value="сначала дорогие">сначала дорогие</option>
+                <option value="по жирности">по жирности</option>
+              </select>
+            </div>
           </div>
           <div class="filter-price">
             <label class="legend" for="filter-price-id">Цена: 100 руб. - 500 руб.</label>
-            <input class="filter-input" type="range" name="price" id="filter-price-id" min="100" max="500">
+            <div class="price-input">
+              <input class="filter-input" type="range" name="price" id="filter-price-id" min="100" max="500">
+            </div>
           </div>
           <fieldset class="filter-fat">
             <legend>Жирность:</legend>
@@ -296,7 +308,7 @@
           </li>
 
           <li class="catalog-item">
-            <h3><a href="#">Сливочное с кусочками чёрного шоколада</a></h3>
+            <h3><a href="#">Сливочное с кусочками черного шоколада</a></h3>
             <p class="catalog-image">
               <img src="img/ice-cream3.3.png" width="267" height="267" alt="Сливочное с кусочками чёрного шоколада">
             </p>
@@ -319,13 +331,13 @@
         </ul>
 
         <ul class="pagination-list list-style">
-          <li class="pagination-back pagination-not-active"><a>Назад</a></li>
+          <li class="pagination-back pagination-disabled"><a><span class="visually-hidden">Назад</span></a></li>
           <li class="pagination-item pagination-current"><a>1</a></li>
           <li class="pagination-item"><a href="#">2</a></li>
           <li class="pagination-item"><a href="#">3</a></li>
           <li class="pagination-item"><a href="#">4</a></li>
           <li class="pagination-item"><a href="#">5</a></li>
-          <li class="pagination-next"><a href="#">Вперёд</a></li>
+          <li class="pagination-next"><a href="#"><span class="visually-hidden">Вперёд</span></a></li>
         </ul>
       </section>
     </main>
