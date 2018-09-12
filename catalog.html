@@ -16,8 +16,8 @@
         <nav class="main-navigation">
           <h2 class="visually-hidden">Главное меню</h2>
           <ul class="site-navigation list-style">
-            <li class="catalog-link">
-              <a class="navigation-link" href="#">Каталог</a>
+            <li class="catalog-link catalog-link-inner">
+              <a class="navigation-link navigation-current" href="#">Каталог</a>
               <ul class="catalog-drop list-style">
                 <li><a class="drop-link" href="#">Новинки</a></li>
                 <li><a href="catalog.html">Сливочное</a></li>
@@ -73,32 +73,32 @@
             </section>
           </li>
           <li class="basket-wrapper">
-            <a class="basket basket-current" href="#">2 товара</a>
+            <a class="basket-link basket-current" href="#">2 товара</a>
             <section class="modal modal-basket">
               <h2 class="visually-hidden">Товары в корзине</h2>
               <form class="basket-form" action="https://echo.htmlacademy.ru" method="post">
                 <ul class="basket-list list-style">
                   <li class="basket-item">
                     <h3>Пломбир с апельсиновым джемом</h3>
-                    <p class="basket-image">
-                      <img src="img/ice-cream1.1.png" width="33" height="33" alt="Пломбир с апельсиновым джемом">
-                    </p>
-                    <p class="basket-value">1,5 кг х <span>200 руб.</span></p>
+                    <p class="basket-amount">1,5 кг х <span>200 руб.</span></p>
                     <p class="basket-value">300 руб.</p>
-                    <button class="modal-close" type="button">Закрыть</button>
+                    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
+                    </button>
                   </li>
                   <li class="basket-item">
                     <h3>Клубничный пломбир с присыпкой из белого шоколада</h3>
-                    <p class="basket-image">
-                      <img src="img/ice-cream1.3.png" width="33" height="33" alt="Клубничный пломбир с присыпкой из белого шоколада">
-                    </p>
-                    <p class="basket-value">1,5 кг х <span>300 руб.</span></p>
+                    <p class="basket-amount">1,5 кг х <span>300 руб.</span></p>
                     <p class="basket-value">450 руб.</p>
-                    <button class="modal-close" type="button">Закрыть</button>
+                    <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11"><path fill="#231F20" d="M10.979.728l-.708-.707L5.5 4.792.729.021.021.728 4.793 5.5.021 10.271l.707.708L5.5 6.207l4.771 4.772.708-.708L6.207 5.5z"/></svg>
+                    </button>
                   </li>
                 </ul>
-                <p class="basket-total">Итого: 750 руб.</p>
-                <a class="button" href="#">Оформить заказ</a>
+                <div class="order-wrapper">
+                  <p class="basket-total">Итого: 750 руб.</p>
+                  <a class="button" href="#">Оформить заказ</a>
+                </div>
               </form>
             </section>
           </li>
@@ -123,12 +123,12 @@
 
       <section class="filters">
         <h2 class="visually-hidden">Фильтр товаров</h2>
-        <form class="filter" action="https://htmlacademy.ru" method="get">
+        <form class="filter" action="https://echo.htmlacademy.ru" method="get">
           <div class="filter-sorting">
             <label class="legend" for="filter-sorting-id">Сортировка:</label>
             <div class="sorting-select">
               <select name="sorting" id="filter-sorting-id">
-                <option value="по популярности">по популярности</option>
+                <option value="по популярности" selected>по популярности</option>
                 <option value="сначала недорогие">сначала недорогие</option>
                 <option value="сначала дорогие">сначала дорогие</option>
                 <option value="по жирности">по жирности</option>
@@ -137,8 +137,12 @@
           </div>
           <div class="filter-price">
             <label class="legend" for="filter-price-id">Цена: 100 руб. - 500 руб.</label>
-            <div class="price-input">
-              <input class="filter-input" type="range" name="price" id="filter-price-id" min="100" max="500">
+            <div class="range-controls">
+              <div class="scale">
+                <div class="bar" style="margin-left: 10%; width: 60%"></div>
+              </div>
+              <div class="toggle toggle-min"></div>
+              <div class="toggle toggle-max"></div>
             </div>
           </div>
           <fieldset class="filter-fat">
@@ -167,28 +171,28 @@
               <legend>Наполнители:</legend>
               <ul class="list-style">
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-chekbox" type="checkbox" name="chocolate" id="filter-chocolate-id" checked>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" id="filter-chocolate-id" checked>
                   <label for="filter-chocolate-id">шоколадные</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-chekbox" type="checkbox" name="sugar" id="filter-sugar-id" checked>
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sugar" id="filter-sugar-id" checked>
                   <label for="filter-sugar-id">сахарные присыпки</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-chekbox" type="checkbox" name="fruit" id="filter-fruit-id">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="fruit" id="filter-fruit-id">
                   <label for="filter-fruit-id">фрукты</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-chekbox" type="checkbox" name="cyrup" id="filter-cyrup-id">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="cyrup" id="filter-cyrup-id">
                   <label for="filter-cyrup-id">сиропы</label>
                 </li>
                 <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-chekbox" type="checkbox" name="jam" id="filter-jam-id">
+                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jam" id="filter-jam-id">
                   <label for="filter-jam-id">джемы</label>
                 </li>
               </ul>
             </fieldset>
-            <button class="filter-button" type="submit" >Применить</button>
+            <button class="filter-button" type="submit">Применить</button>
           </div>
         </form>
       </section>
