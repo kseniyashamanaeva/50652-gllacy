@@ -499,16 +499,16 @@ a.drop-link {
   border-radius: 4px;
 }
 
-::-webkit-input-placeholder {
+.modal-login input::-webkit-input-placeholder {
   font-size: 14px;
 }
-::-moz-placeholder {
+.modal-login input::-moz-placeholder {
   font-size: 14px;
 }
-:-moz-placeholder {
+.modal-login input:-moz-placeholder {
   font-size: 14px;
 }
-:-ms-input-placeholder {
+.modal-login input:-ms-input-placeholder {
   font-size: 14px;
 }
 
@@ -1446,7 +1446,8 @@ a.drop-link {
 .contacts-call {
   line-height: 22px;
   display: block;
-  margin: 19px 25px 26px 25px;
+  margin: 19px 25px 26px 0;
+  padding: 0;
 }
 
 .contacts-info .button {
@@ -1472,7 +1473,6 @@ a.drop-link {
   border: none;
   outline: none;
 }
-
 
 .modal-message {
   position: fixed;
