@@ -773,12 +773,14 @@ a.drop-link {
 }
 
 .call-phone {
+  color: #ffffff;
   font-size: 22px;
   font-weight: 700;
   line-height: 24px;
   margin: 0;
   padding: 0;
   padding-top: 5px;
+  border: none;
 }
 
 .container {
@@ -1329,10 +1331,12 @@ a.drop-link {
 }
 
 .contacts-call {
+  color: #323232;
   line-height: 22px;
   display: block;
   margin: 19px 25px 26px 0;
   padding: 0;
+  border: none;
 }
 
 .contacts-info .button {
@@ -1941,11 +1945,11 @@ a.navigation-current:focus {
   content: "";
   position: absolute;
   top: -2px;
-  left: -36px;
+  left: -34px;
   width: 24px;
   height: 23px;
   background-image: url("../img/checkbox-off.svg");
-  background-size: 26px 21px;
+  background-size: 22px 21px;
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.8;
@@ -2164,6 +2168,7 @@ a.navigation-current:focus {
   position: relative;
   width: 17px;
   margin-left: 20px;
+  cursor: pointer;
 }
 
 .pagination-next::after {
