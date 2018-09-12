@@ -57,42 +57,35 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
-.button,
-.hits-item .button,
-.catalog-item .button {
+.button {
+  display: inline-block;
+  text-align: center;
+  vertical-align: top;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
   color: #ffffff;
-  text-align: center;
-  background-color: #f16442;
-  background-image: linear-gradient(#f26843, #ca3824);
-  box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
-  border: none;
-  border-radius: 20px;
-}
-
-.button:hover,
-.hits-item .button:hover,
-.catalog-item .button:hover,
-.button:focus,
-.hits-item .button:focus,
-.catalog-item .button:focus {
-  color: #fefefe;
-  background-image: linear-gradient(#f58669, #ec6f5e);
-  box-shadow: 0px 1px 2px 0px #ac1000;
+  background-image: linear-gradient(#f26843, #e74a35);
+  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  border-radius: 30px;
   border: none;
   cursor: pointer;
 }
 
-.button:active,
-.hits-item .button:active,
-.catalog-item .button:active {
+.button:hover,
+.button:focus {
+  background-image: linear-gradient(#f58669, #ec6f5e);
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0px 2px 2px 0px #ac1000;
+  border: none;
+}
+
+.button:active {
   color: #fceeec;
-  background-image: linear-gradient(#e74a35, #f26843);
+  background-image: linear-gradient(#f26843, #e74a35);
+  background-color: rgba(0, 0, 0, 0.07);
   box-shadow: inset 0px 2px 2px 0px #942718;
   border: none;
-  outline: none;
 }
 
 .modal {
@@ -351,7 +344,7 @@ a.drop-link {
 
 .modal-search {
   position: absolute;
-  top: 37px;
+  top: 36px;
   right: 0;
   width: 341px;
   min-height: 84px;
@@ -379,7 +372,8 @@ a.drop-link {
 .search-wrapper {
   position: relative;
   z-index: 1;
-  margin-top: 13px;
+  margin-top: 12px;
+  margin-right: -2px;
   padding-bottom: 13px;
 }
 
@@ -417,8 +411,8 @@ a.drop-link {
   z-index: 1;
   color: #ffffff;
   margin: 0;
-  margin-left: 10px;
-  padding: 8px 16px 8px 45px;
+  margin-left: 11px;
+  padding: 7px 16px 8px 45px;
   border-radius: 20px;
   background-color: rgba(248, 247, 244, 0.2);
 }
@@ -433,7 +427,7 @@ a.drop-link {
 .login-link::before {
   content: "";
   position: absolute;
-  top: 7px;
+  top: 6px;
   left: 17px;
   width: 21px;
   height: 19px;
@@ -449,7 +443,7 @@ a.drop-link {
 .login-wrapper {
   position: relative;
   z-index: 1;
-  margin-top: 23px;
+  margin-top: 21px;
   padding-bottom: 23px;
 }
 
@@ -465,14 +459,16 @@ a.drop-link {
 .login-wrapper:hover::after {
   content: "";
   position: absolute;
-  top: -2px;
-  left: 27px;
+  top: -4px;
+  left: 28px;
   width: 21px;
   height: 19px;
+  background-color: #f8f7f4;
   background-image: url("../img/entrance.svg");
   background-repeat: no-repeat;
-  background-position: 0 0;
-  z-index: 1;
+  background-position: 0;
+  padding: 2px 2px;
+  z-index: 2;
 }
 
 .modal-login {
@@ -514,37 +510,14 @@ a.drop-link {
 
 .login-form .button {
   padding: 10px 25px;
-  margin-right: 20px;
-  margin-bottom: 22px;
-  margin-left: 19px;
-  background-image: linear-gradient(#f26843, #e74a35);
-  box-shadow: 0px 1px 2px 0px #ac1000;
-  border-radius: 50px;
-  border: none;
-  outline: none;
-}
-
-.login-form .button:hover,
-.login-form .button:focus {
-  color: #ffffff;
-  background-image: linear-gradient(#f58669, #ec6f5e);
-  box-shadow: 0px 2px 2px 0px #ac1000;
-  border: none;
-  cursor: pointer;
-}
-
-.login-form .button:active {
-  color: #fceeec;
-  background-image: linear-gradient(#e74a35, #f26843);
-  box-shadow: inset 0px 2px 2px 0px #942718;
-  border: none;
-  outline: none;
+  margin: 3px 20px 22px 19px;
+  border-radius: 20px;
 }
 
 .entrance-wrapper {
   display: flex;
   justify-content: space-between;
-  padding-top: 5px;
+  padding-top: 4px;
 }
 
 .registration {
@@ -606,7 +579,7 @@ a.drop-link {
 .basket-wrapper {
   position: relative;
   z-index: 1;
-  margin-top: 23px;
+  margin-top: 21px;
   padding-bottom: 23px;
 }
 
@@ -778,32 +751,7 @@ a.drop-link {
 }
 
 .basket-form .button {
-  color: #ffffff;
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
   padding: 9px 15px;
-  background-image: linear-gradient(#f26843, #e74a35);
-  box-shadow: 0px 1px 2px 0px #ac1000;
-  border-radius: 50px;
-  border: none;
-}
-
-.basket-form .button:hover,
-.basket-form .button:focus {
-  color: #ffffff;
-  background-image: linear-gradient(#f58669, #ec6f5e);
-  box-shadow: 0px 2px 2px 0px #ac1000;
-  border: none;
-  cursor: pointer;
-}
-
-.basket-form .button:active {
-  color: #fceeec;
-  background-image: linear-gradient(#e74a35, #f26843);
-  box-shadow: inset 0px 2px 2px 0px #942718;
-  border: none;
-  outline: none;
 }
 
 .call {
@@ -842,7 +790,7 @@ a.drop-link {
 .slider {
   position: relative;
   width: 1146px;
-  margin-bottom: 41px;
+  margin-bottom: 40px;
   text-align: center;
 }
 
@@ -870,33 +818,9 @@ a.drop-link {
   font-size: 32px;
   font-weight: 700;
   line-height: 44px;
-  color: #ffffff;
-  display: inline-block;
-  text-align: center;
-  vertical-align: top;
   text-shadow: 0px 2px 5px rgba(160, 32, 11, 0.76);
-  background-image: linear-gradient(#f26843, #e74a35);
-  box-shadow: 0px 2px 2px 0px rgba(172, 16, 0, 0.64);
+  border-radius: 30px;
   padding: 10px 40px;
-  border-radius: 50px;
-  border: none;
-}
-
-.slider-item .button:hover,
-.slider-item .button:focus {
-  color: #ffffff;
-  background-image: linear-gradient(#f58669, #ec6f5e);
-  box-shadow: 0px 2px 2px 0px #ac1000;
-  border: none;
-  cursor: pointer;
-}
-
-.slider-item .button:active {
-  color: #fceeec;
-  background-image: linear-gradient(#e74a35, #f26843);
-  box-shadow: inset 0px 2px 2px 0px #942718;
-  border: none;
-  outline: none;
 }
 
 .slider-controls {
@@ -967,13 +891,13 @@ a.drop-link {
 .gifts-list h3 {
   font-size: 35px;
   line-height: 41px;
-  margin: 16px 19px;
+  margin: 17px 19px;
 }
 
 .gifts-list p {
   font-size: 18px;
   line-height: 22px;
-  margin: 0 19px 42px 19px;
+  margin: -2px 19px 44px 20px;
 }
 
 .gifts-list .button {
@@ -981,19 +905,22 @@ a.drop-link {
   float: right;
   font-size: 18px;
   line-height: 24px;
-  padding: 12px 23px;
+  padding-top: 10px;
+  padding-right: 23px;
+  padding-bottom: 11px;
+  padding-left: 22px;
   margin: 0;
   margin-right: 20px;
   background-image: linear-gradient(#f26843, #ca3824);
-  box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.2);
+  box-shadow: 0px 2px 2px 0px rgba(85, 8, 0, 0.54);
   border-radius: 50px;
 }
 
 .gifts-list .button:hover,
 .gifts-list .button:focus {
   color: #ffffff;
-  background-image: linear-gradient(#e74a35, #f26843);
-  background-color: rgba(255, 255, 255, 0.5);
+  background-image: linear-gradient(#f26843, #e74a35);
+  background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0px 1px 2px 0px #ac1000;
   border: none;
   cursor: pointer;
@@ -1014,7 +941,7 @@ a.drop-link {
   min-height: 230px;
   margin: 0;
   padding: 0;
-  border-radius: 15px;
+  border-radius: 17px;
 }
 
 .gifts-raspberries {
@@ -1122,7 +1049,7 @@ a.drop-link {
   left: 80px;
   width: 31px;
   height: 36px;
-  background-image: url("../img/ruble.svg");
+  background-image: url("../img/ruble.png");
   background-repeat: no-repeat;
   background-position: 0 0;
 }
@@ -1143,32 +1070,11 @@ a.drop-link {
 
 .hits-item .button {
   display: none;
-  color: #ffffff;
-  background-image: linear-gradient(#f26843, #e74a35);
-  box-shadow: 0px 1px 2px 0px #ac1000;
-  border-radius: 20px;
   margin: 0;
   margin-top: 6px;
   margin-left: 13px;
   padding: 10px 17px;
   order: 2;
-}
-
-.hits-item .button:hover,
-.hits-item .button:focus {
-  color: #ffffff;
-  background-image: linear-gradient(#f58669, #ec6f5e);
-  box-shadow: 0px 2px 2px 0px #ac1000;
-  border: none;
-  cursor: pointer;
-}
-
-.hits-item .button:active {
-  color: #fceeec;
-  background-image: linear-gradient(#e74a35, #f26843);
-  box-shadow: inset 0px 2px 2px 0px #942718;
-  border: none;
-  outline: none;
 }
 
 .hits-item:hover .button {
@@ -1332,7 +1238,6 @@ a.drop-link {
 .news a:hover,
 .news a:focus {
   color: #e84d37;
-  border-bottom: 2px solid rgba(232, 77, 55, 0.3);
 }
 
 .subscription {
@@ -1380,27 +1285,7 @@ a.drop-link {
 .subscription-form .button {
   display: block;
   margin: 0;
-  padding: 8px 20px 11px 18px;
-  background-image: linear-gradient(#f26843, #e74a35);
-  box-shadow: 0px 2px 2px 0px #ac1000;
-}
-
-.subscription-form .button:hover,
-.subscription-form .button:focus {
-  color: #ffffff;
-  background-image: linear-gradient(#f58669, #ec6f5e);
-  box-shadow: 0px 2px 2px 0px #ac1000;
-  border: none;
-  outline: none;
-  cursor: pointer;
-}
-
-.subscription-form .button:active {
-  color: #fceeec;
-  background-image: linear-gradient(#e74a35, #f26843);
-  box-shadow: inset 0px 2px 2px 0px #942718;
-  border: none;
-  outline: none;
+  padding: 10px 19px;
 }
 
 .contacts {
@@ -1453,25 +1338,7 @@ a.drop-link {
 .contacts-info .button {
   display: block;
   margin: 15px 25px 30px 25px;
-  padding: 8px 19px 11px 19px;
-  background-image: linear-gradient(#f26843, #e74a35);
-  box-shadow: 0px 2px 2px 0px #ac1000;
-}
-
-.contacts-info .button:hover {
-  color: #ffffff;
-  background-image: linear-gradient(#f58669, #ec6f5e);
-  box-shadow: 0px 2px 2px 0px #ac1000;
-  border: none;
-  cursor: pointer;
-}
-
-.contacts-info .button:active {
-  color: #fceeec;
-  background-image: linear-gradient(#e74a35, #f26843);
-  box-shadow: inset 0px 2px 2px 0px #942718;
-  border: none;
-  outline: none;
+  padding: 10px 19px;
 }
 
 .modal-message {
@@ -1520,26 +1387,6 @@ a.drop-link {
   margin: 0;
   margin-left: 340px;
   padding: 10px 23px;
-  background-image: linear-gradient(#f26843, #e74a35);
-  box-shadow: 0px 1px 2px 0px rgba(172, 16, 0, 0.64);
-  border-radius: 50px;
-}
-
-.message-form .button:hover,
-.message-form .button:focus {
-  color: #ffffff;
-  background-image: linear-gradient(#f58669, #ec6f5e);
-  box-shadow: 0px 2px 2px 0px #ac1000;
-  border: none;
-  cursor: pointer;
-}
-
-.message-form .button:active {
-  color: #fceeec;
-  background-image: linear-gradient(#e74a35, #f26843);
-  box-shadow: inset 0px 2px 2px 0px #942718;
-  border: none;
-  outline: none;
 }
 
 .modal-message .modal-close {
@@ -1548,10 +1395,6 @@ a.drop-link {
   padding: 0;
   cursor: pointer;
 }
-
-
-
-
 
 .main-footer {
   font-size: 13px;
@@ -1749,7 +1592,7 @@ a.navigation-current:focus {
 
 .breadcrumbs a {
   color: #ffffff;
-  padding-right: 8px;
+  margin-right: 8px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -2098,12 +1941,19 @@ a.navigation-current:focus {
   content: "";
   position: absolute;
   top: -2px;
-  left: -33px;
-  width: 17px;
-  height: 17px;
-  border: 2px solid #ffffff;
-  border-radius: 2px;
+  left: -36px;
+  width: 24px;
+  height: 23px;
+  background-image: url("../img/checkbox-off.svg");
+  background-size: 26px 21px;
+  background-repeat: no-repeat;
+  background-position: 0 0;
   opacity: 0.8;
+}
+
+.filter-input-checkbox + label:hover::before,
+.filter-input-checkbox + label:focus::before {
+  opacity: 1;
 }
 
 .filter-input-checkbox:checked + label::after {
@@ -2113,18 +1963,16 @@ a.navigation-current:focus {
   left: -34px;
   width: 27px;
   height: 23px;
-  background-image: url("../img/checkbox-on.svg");
+  background-color: #9db1a5;
+  background-image: url("../img/checkbox-checked.svg");
   background-size: 26px 21px;
   background-repeat: no-repeat;
   background-position: 0 0;
-  opacity: 0.8;
 }
 
-.filter-input-checkbox + label:hover::before,
-.filter-input-checkbox + label:focus::before,
 .filter-input-checkbox:checked + label:hover::after,
 .filter-input-checkbox:checked + label:focus::after {
-  opacity: 1;
+  background-image: url("../img/checkbox.svg");
 }
 
 .filter-input:disabled + label {
@@ -2226,32 +2074,11 @@ a.navigation-current:focus {
 
 .catalog-item .button {
   display: none;
-  color: #ffffff;
-  background-image: linear-gradient(#f26843, #e74a35);
-  box-shadow: 0px 1px 2px 0px #ac1000;
-  border-radius: 20px;
   margin: 0;
   margin-top: 6px;
   margin-left: 13px;
   padding: 10px 17px;
   order: 2;
-}
-
-.catalog-item .button:hover,
-.catalog-item .button:focus {
-  color: #ffffff;
-  background-image: linear-gradient(#f58669, #ec6f5e);
-  box-shadow: 0px 2px 2px 0px #ac1000;
-  border: none;
-  cursor: pointer;
-}
-
-.catalog-item .button:active {
-  color: #fceeec;
-  background-image: linear-gradient(#e74a35, #f26843);
-  box-shadow: inset 0px 2px 2px 0px #942718;
-  border: none;
-  outline: none;
 }
 
 .catalog-item:hover .button {
