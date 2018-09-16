@@ -194,7 +194,6 @@ input[type="radio"].visually-hidden {
   margin: 0;
   padding: 0;
   padding-top: 23px;
-  position: relative;
 }
 
 .site-navigation a {
@@ -416,24 +415,21 @@ a.submenu-new {
   border-radius: 4px;
 }
 
-.modal-search input::-webkit-input-placeholder,
-.modal-login input::-webkit-input-placeholder {
+.modal-search input::-webkit-input-placeholder {
   font-size: 14px;
 }
 
-.modal-search input::-moz-placeholder,
-.modal-login input::-moz-placeholder {
+.modal-search input::-moz-placeholder {
   font-size: 14px;
 }
 
-.modal-search input:-moz-placeholder,
-.modal-login input:-moz-placeholder {
+.modal-search input:-moz-placeholder {
   font-size: 14px;
 }
 
-.modal-search input:-ms-input-placeholder,
-.modal-login input:-ms-input-placeholder {
+.modal-search input:-ms-input-placeholder {
   font-size: 14px;
+  font-weight: 400;
 }
 
 .user-navigation {
@@ -543,6 +539,24 @@ a.submenu-new {
   padding-bottom: 9px;
   padding-left: 13px;
   border-radius: 4px;
+}
+
+.modal-login input::-webkit-input-placeholder {
+  font-size: 14px;
+}
+
+.modal-login input::-moz-placeholder {
+  font-size: 14px;
+}
+
+.modal-login input:-moz-placeholder {
+  font-size: 14px;
+}
+
+.modal-login input:-ms-input-placeholder {
+  font-size: 14px;
+  font-weight: 400;
+  padding-bottom: 16px;
 }
 
 .entrance-wrapper {
@@ -863,7 +877,6 @@ a.submenu-new {
 
 .slider {
   position: relative;
-  width: 1146px;
   margin-bottom: 41px;
   text-align: center;
 }
@@ -1344,7 +1357,6 @@ a.submenu-new {
   line-height: 22px;
   margin: 28px 21px 19px 21px;
   padding: 0;
-  ;
 }
 
 .subscription-form {
@@ -1362,6 +1374,11 @@ a.submenu-new {
   padding-top: 9px;
   padding-bottom: 9px;
   padding-left: 14px;
+}
+
+.subscription-item input:-ms-input-placeholder {
+  font-weight: 400;
+  padding-bottom: 14px;
 }
 
 .subscription-form .button {
@@ -1400,7 +1417,7 @@ a.submenu-new {
   width: 1200px;
   height: 430px;
   margin: 0;
-  margin-left: -27px
+  margin-left: -27px;
 }
 
 .contacts-info {
@@ -1548,6 +1565,12 @@ a.submenu-new {
   padding-top: 7px;
   padding-left: 14px;
   resize: none;
+}
+
+.message-form input:-ms-input-placeholder,
+.message-form textarea:-ms-input-placeholder {
+  font-weight: 400;
+  padding-bottom: 14px;
 }
 
 .message-form .button {
@@ -1888,10 +1911,14 @@ a.submenu-new {
   color: #fff;
   border: none;
   border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, .2);
   -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.sorting-select select::-ms-expand {
+    display: none;
 }
 
 .sorting-select select:hover,
@@ -2031,6 +2058,7 @@ a.submenu-new {
 
 .filter-fat {
   display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
 }
