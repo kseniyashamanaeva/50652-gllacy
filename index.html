@@ -22,18 +22,18 @@
           <nav class="main-navigation">
             <h2 class="visually-hidden">Главное меню</h2>
             <ul class="site-navigation list-style">
-              <li class="catalog-link">
-                <a class="navigation-link" href="#">Каталог</a>
-                <ul class="catalog-drop list-style">
-                  <li><a class="drop-link" href="#">Новинки</a></li>
+              <li class="submenu-link">
+                <a class="navigation-link" href="#"><b><span>Каталог</span></b></a>
+                <ul class="submenu list-style">
+                  <li><a class="submenu-new" href="#">Новинки</a></li>
                   <li><a href="catalog.html">Сливочное</a></li>
                   <li><a href="#">Щербеты</a></li>
                   <li><a href="#">Фруктовый лед</a></li>
                   <li><a href="#">Мелорин</a></li>
                 </ul>
               </li>
-              <li><a class="navigation-link" href="#">Доставка и оплата</a></li>
-              <li><a class="navigation-link" href="#">О Компании</a></li>
+              <li><a class="navigation-link" href="#"><span>Доставка и оплата</span></a></li>
+              <li><a class="navigation-link" href="#"><span>О Компании</span></a></li>
             </ul>
           </nav>
         </div>
@@ -145,7 +145,7 @@
                 <img src="img/ice-cream1.1.png" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
               </p>
               <p class="catalog-price">
-                310 <span class="visually-hidden">₽</span> <span>/кг</span>
+                310 <b class="ruble">₽</b> <span>/кг</span>
               </p>
               <a class="button" href="#">Быстрый просмотр</a>
             </li>
@@ -156,7 +156,7 @@
                 <img src="img/ice-cream1.2.png" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
               </p>
               <p class="catalog-price">
-                380 <span class="visually-hidden">₽</span> <span>/кг</span>
+                380 <b class="ruble">₽</b> <span>/кг</span>
               </p>
               <a class="button" href="#">Быстрый просмотр</a>
             </li>
@@ -167,7 +167,7 @@
                 <img src="img/ice-cream1.3.png" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
               </p>
               <p class="catalog-price">
-                355 <span class="visually-hidden">₽</span> <span>/кг</span>
+                355 <b class="ruble">₽</b> <span>/кг</span>
               </p>
               <a class="button" href="#">Быстрый просмотр</a>
             </li>
@@ -178,7 +178,7 @@
                 <img src="img/ice-cream1.4.png" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
               </p>
               <p class="catalog-price">
-                415 <span class="visually-hidden">₽</span> <span>/кг</span>
+                415 <b class="ruble">₽</b> <span>/кг</span>
               </p>
               <a class="button" href="#">Быстрый просмотр</a>
             </li>
@@ -191,10 +191,10 @@
             <h3>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h3>
 
             <ul class="features-list list-style">
-              <li class="features-item">Всё наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-              <li class="features-item">Закупка ингридиентов производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-              <li class="features-item">Для изготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингридиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-              <li class="features-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не даёт мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+              <li class="features-item">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+              <li class="features-item">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+              <li class="features-item">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья. </li>
+              <li class="features-item">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
             </ul>
           </div>
         </section>
@@ -220,6 +220,7 @@
               </form>
             </div>
           </section>
+
         </div>
 
         <section class="contacts">
@@ -241,8 +242,8 @@
         </section>
 
         <section class="modal modal-message">
+          <h2>Мы обязательно вам ответим!</h2>
           <form class="message-form" action="https://echo.htmlacademy.ru" method="post">
-            <h2>Мы обязательно вам ответим!</h2>
             <p class="message-item">
               <label class="visually-hidden" for="message-name-id">Ваше имя</label>
               <input type="text" name="name" id="message-name-id" value="" placeholder="Как вас зовут?">
@@ -253,14 +254,15 @@
             </p>
             <p class="message-item">
               <label class="visually-hidden" for="message-question-id">Ваше сообщение</label>
-              <textarea name="message" id="message-question-id" cols="55" rows="5" placeholder="Напишите что-нибудь..."></textarea>
+              <textarea name="message" id="message-question-id" cols="49" rows="6" placeholder="Напишите что-нибудь..."></textarea>
             </p>
             <button class="button" type="submit">Отправить</button>
           </form>
-          <button class="modal-close" type="button"><span class="visually-hidden">Закрыть</span>
-            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="17" viewBox="0 0 18 17"><path fill="#231F20" d="M17.454 1.46L16.04.046 9 7.086 1.96.046.546 1.46l7.04 7.04-7.04 7.04 1.414 1.414L9 9.914l7.04 7.04 1.414-1.414-7.04-7.04z"/></svg>
-          </button>
+          <button class="modal-close" type="button">Закрыть</button>
         </section>
+
+        <div class="overlay"></div>
+
       </main>
 
       <footer class="main-footer">
