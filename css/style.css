@@ -200,6 +200,7 @@ input[type="radio"].visually-hidden {
 .site-navigation a {
   display: block;
   padding: 7px 14px;
+  outline: none;
 }
 
 .navigation-link {
@@ -342,6 +343,7 @@ a.submenu-new {
   margin: 0;
   color: #fff;
   border-radius: 50%;
+  outline: none;
   background-color: rgba(248, 247, 244, 0.2);
 }
 
@@ -453,6 +455,7 @@ a.submenu-new {
   padding: 8px 16px 8px 45px;
   color: #fff;
   border-radius: 20px;
+  outline: none;
   background-color: rgba(248, 247, 244, 0.2);
 }
 
@@ -582,6 +585,7 @@ a.submenu-new {
   padding: 8px 16px 8px 45px;
   color: #fff;
   border-radius: 20px;
+  outline: none;
   background-color: rgba(248, 247, 244, 0.2);
 }
 
@@ -1070,6 +1074,7 @@ a.submenu-new {
   font-weight: 500;
   line-height: 22px;
   color: #fff;
+  outline: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -1304,6 +1309,7 @@ a.submenu-new {
   line-height: 30px;
   text-decoration: underline;
   color: #323232;
+  outline: none;
 }
 
 .news a:hover,
@@ -1366,15 +1372,35 @@ a.submenu-new {
 
 .contacts {
   position: relative;
-  margin: 0 -27px;
+  z-index: 1;
+  width: 100%;
+  height: 430px;
+  margin-bottom: 5px;
   padding: 0;
 }
 
-.map {
-  width: auto;
+.contacts iframe {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  height: 430px;
+}
+
+.contacts-wrapper {
+  position: relative;
+  display: flex;
+  width: 1146px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
+.contacts-wrapper img {
+  position: absolute;
+  z-index: 1;
+  width: 1200px;
   height: 430px;
   margin: 0;
-  padding: 0;
+  margin-left: -27px
 }
 
 .contacts-info {
@@ -1382,7 +1408,7 @@ a.submenu-new {
   font-weight: 400;
   line-height: 20px;
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   top: 62px;
   right: 27px;
   width: 302px;
@@ -1430,6 +1456,46 @@ a.submenu-new {
   padding: 10px 19px;
 }
 
+@keyframes bounce {
+  0% {
+    transform: translateX(280px);
+  }
+
+  70% {
+    transform: translateX(-30px);
+  }
+
+  90% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
 .modal-message {
   position: fixed;
   z-index: 5;
@@ -1441,6 +1507,15 @@ a.submenu-new {
   margin-left: -237px;
   padding: 15px 25px 27px 24px;
   border-radius: 10px;
+}
+
+.modal-show {
+  display: block;
+  animation: bounce 0.5s;
+}
+
+.modal-error {
+  animation: shake 0.5s;
 }
 
 .modal-message h2 {
@@ -1529,6 +1604,10 @@ a.submenu-new {
   background-color: rgba(0, 0, 0, 0.3);
 }
 
+.overlay-show {
+  display: block;
+}
+
 .main-footer {
   font-size: 13px;
   font-weight: 400;
@@ -1568,6 +1647,7 @@ a.submenu-new {
   height: 38px;
   margin: 0;
   padding: 0;
+  outline: none;
 }
 
 .social-button svg {
@@ -1643,6 +1723,7 @@ a.submenu-new {
 
 .footer-info a,
 .footer-copyright a {
+  outline: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -1732,6 +1813,7 @@ a.submenu-new {
 .breadcrumbs a {
   margin-right: 8px;
   color: #fff;
+  outline: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -2169,6 +2251,7 @@ a.submenu-new {
   font-weight: 500;
   line-height: 22px;
   color: #fff;
+  outline: none;
   border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
@@ -2223,6 +2306,7 @@ a.submenu-new {
   height: 26px;
   margin-left: 3px;
   color: #fff;
+  outline: none;
   border-radius: 50%;
 }
 
