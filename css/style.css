@@ -198,7 +198,8 @@ input[type="radio"].visually-hidden {
 
 .site-navigation a {
   display: block;
-  padding: 7px 14px;
+  padding: 7px 13px;
+  margin-right: 2px;
   outline: none;
 }
 
@@ -214,6 +215,7 @@ input[type="radio"].visually-hidden {
 .navigation-link:hover,
 .navigation-link:focus {
   margin: 0;
+  margin-right: 2px;
   color: #333;
   border: none;
   border-radius: 20px;
@@ -227,6 +229,7 @@ input[type="radio"].visually-hidden {
 }
 
 .navigation-link b {
+  font-weight: bold;
   padding-bottom: 32px;
 }
 
@@ -258,7 +261,7 @@ input[type="radio"].visually-hidden {
   top: 0;
   left: 0;
   display: none;
-  width: 60px;
+  min-width: 61px;
   height: 18px;
   padding: 7px 14px;
   content: "";
@@ -283,21 +286,24 @@ input[type="radio"].visually-hidden {
 }
 
 .submenu li:first-child {
-  margin-top: 8px;
+  margin-top: 6px;
   margin-bottom: 12px;
-  padding: 3px 6px 7px 20px;
+  padding-top: 5px;
+  padding-right: 6px;
+  padding-bottom: 5px;
+  padding-left: 20px;
 }
 
-a.submenu-new {
+.submenu-new > a {
   font-weight: 700;
   position: relative;
 }
 
 .submenu-new:after {
   position: absolute;
-  top: 28px;
-  left: -14px;
-  width: 129px;
+  top: 38px;
+  left: 6px;
+  width: 128px;
   height: 1px;
   content: "";
   background: #d1d0ce;
@@ -305,15 +311,17 @@ a.submenu-new {
 
 .submenu li:nth-child(n+2) {
   margin-bottom: 5px;
-  padding: 3px 6px 7px 20px;
+  padding-top: 5px;
+  padding-right: 6px;
+  padding-bottom: 5px;
+  padding-left: 20px;
 }
 
 .submenu li:last-child {
-  margin-bottom: 5px;
+  margin-bottom: 8px;
 }
 
-.submenu li:hover,
-.submenu li:focus {
+.submenu li:hover {
   background-color: #fbded7;
 }
 
@@ -533,6 +541,7 @@ a.submenu-new {
 .modal-login input {
   box-sizing: border-box;
   width: 240px;
+  min-height: 44px;
   margin: 5px 20px;
   margin-bottom: 1px;
   padding-top: 9px;
@@ -556,7 +565,6 @@ a.submenu-new {
 .modal-login input:-ms-input-placeholder {
   font-size: 14px;
   font-weight: 400;
-  padding-bottom: 16px;
 }
 
 .entrance-wrapper {
@@ -857,6 +865,7 @@ a.submenu-new {
 }
 
 .call-phone {
+  display: flex;
   font-size: 22px;
   font-weight: 700;
   line-height: 24px;
@@ -864,7 +873,6 @@ a.submenu-new {
   padding: 0;
   padding-top: 5px;
   color: #fff;
-  border: none;
 }
 
 .container {
@@ -1057,6 +1065,7 @@ a.submenu-new {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  margin-bottom: 26px;
   padding: 0;
 }
 
@@ -1066,7 +1075,6 @@ a.submenu-new {
   flex-direction: column;
   width: 293px;
   margin: 0;
-  margin-bottom: 26px;
   padding: 0;
 }
 
@@ -1149,8 +1157,8 @@ a.submenu-new {
 
 .hits-item:hover {
   z-index: 1;
-  margin-bottom: -50px;
-  padding-bottom: 50px;
+  margin-bottom: -76px;
+  padding-bottom: 76px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.08);
@@ -1370,6 +1378,7 @@ a.submenu-new {
 .subscription-item input {
   box-sizing: border-box;
   width: 368px;
+  min-height: 44px;
   margin: 0;
   padding-top: 9px;
   padding-bottom: 9px;
@@ -1378,7 +1387,6 @@ a.submenu-new {
 
 .subscription-item input:-ms-input-placeholder {
   font-weight: 400;
-  padding-bottom: 14px;
 }
 
 .subscription-form .button {
@@ -1401,6 +1409,7 @@ a.submenu-new {
   z-index: 2;
   width: 100%;
   height: 430px;
+  border: none;
 }
 
 .contacts-wrapper {
@@ -1435,41 +1444,46 @@ a.submenu-new {
   background-color: #fffffe;
 }
 
-.main-contacts {
-  display: block;
-  margin: 29px 25px 0 25px;
-  padding: 0;
+.contacts-info p,
+.contacts-info b {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin: 0 25px;
 }
 
-.main-contacts span,
-.contacts-call span {
+.contacts-info p:nth-of-type(1) {
+  display: block;
+  margin-top: 30px;
+  margin-right: 125px;
+}
+
+.contacts-info b:nth-of-type(1) {
+  display: block;
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
+  margin-bottom: 18px;
 }
 
-.contacts-call {
+.contacts-info p:nth-of-type(2) {
+  margin-bottom: 5px;
+}
+
+.contacts-info b:nth-of-type(2) {
+  font-size: 18px;
   line-height: 22px;
-  display: block;
-  margin: 20px 25px 24px 0;
-  padding: 0;
-  color: #323232;
-  border: none;
+  margin-bottom: 3px;
 }
 
-.contacts-call .phone {
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-}
-
-.contacts-call:first-child {
+.contacts-info p:nth-of-type(3) {
   line-height: 20px;
 }
 
 .contacts-info .button {
   display: block;
-  margin: 15px 25px 30px 25px;
+  margin: 23px 25px 30px 25px;
   padding: 10px 19px;
 }
 
@@ -1552,6 +1566,7 @@ a.submenu-new {
 .message-form input[type="text"] {
   box-sizing: border-box;
   width: 267px;
+  min-height: 44px;
   padding-top: 9px;
   padding-bottom: 8px;
   padding-left: 13px;
@@ -1560,6 +1575,7 @@ a.submenu-new {
 .message-form textarea {
   box-sizing: border-box;
   width: 100%;
+  min-height: 155px;
   overflow: auto;
   margin: 0;
   padding-top: 7px;
@@ -1570,7 +1586,6 @@ a.submenu-new {
 .message-form input:-ms-input-placeholder,
 .message-form textarea:-ms-input-placeholder {
   font-weight: 400;
-  padding-bottom: 14px;
 }
 
 .message-form .button {
@@ -1649,7 +1664,7 @@ a.submenu-new {
   display: flex;
   justify-content: space-between;
   margin: 0;
-  padding: 12px 0 26px 0;
+  padding: 13px 0 26px 0;
 }
 
 .footer-socials ul {
@@ -1797,6 +1812,7 @@ a.submenu-new {
 .navigation-current > a:focus,
 .navigation-current > a:active {
   margin: 0;
+  padding: 7px 14px;
   color: #fff;
   border-radius: 20px;
   background-color: #d07058;
@@ -1808,10 +1824,24 @@ a.submenu-new {
 }
 
 .navigation-current::before {
+  min-width: 60px;
   background-color: #d07058;
 }
 
 .navigation-current:hover > a {
+  color: #fff;
+}
+
+li.submenu-current,
+li.submenu-current:hover,
+li.submenu-current:focus {
+  background-color: #d07058;
+}
+
+.submenu-current > a,
+.submenu-current:hover > a,
+.submenu-current:not(:hover) > a,
+.submenu-current:focus > a  {
   color: #fff;
 }
 
@@ -1859,13 +1889,11 @@ a.submenu-new {
 }
 
 .filters {
-  width: 860px;
   margin-bottom: 40px;
 }
 
 .filter {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
@@ -1888,12 +1916,12 @@ a.submenu-new {
   display: flex;
   flex-direction: column;
   margin: 0;
+  margin-right: 16px;
+  margin-bottom: 16px;
   padding: 0;
 }
 
 .filter-sorting .legend {
-  width: 163px;
-  min-height: 16px;
   margin: 0;
   margin-bottom: 5px;
   margin-left: 16px;
@@ -1925,6 +1953,7 @@ a.submenu-new {
 .sorting-select select:focus {
   color: #323232;
   border: none;
+  outline: none;
   background-color: rgba(255, 255, 255, 0.2);
 }
 
@@ -1945,7 +1974,8 @@ a.submenu-new {
   border-color: #fff transparent transparent transparent;
 }
 
-.sorting-select:hover::before {
+.sorting-select:hover::before,
+.sorting-select:focus::before {
   border-width: 9px 5px 0 5px;
   border-style: solid;
   border-color: #323232 transparent transparent transparent;
@@ -1973,15 +2003,15 @@ a.submenu-new {
   display: flex;
   flex-direction: column;
   margin: 0;
+  margin-right: 16px;
+  margin-bottom: 16px;
   padding: 0;
 }
 
 .filter-price .legend {
-  width: 182px;
-  min-height: 16px;
   margin: 0;
   margin-bottom: 5px;
-  margin-left: 13px;
+  margin-left: 14px;
   padding: 0;
 }
 
@@ -2034,38 +2064,16 @@ a.submenu-new {
           transform: scale(1.1);
 }
 
-.filter ul {
-  font-size: 16px;
-  line-height: 18px;
-  display: flex;
-  justify-content: space-between;
-  border-radius: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-
-.filter-fat .filter-option:first-child {
-  margin-left: 40px;
-}
-
-.filter-fat .filter-option:last-child {
-  margin-right: 19px;
-}
-
-.filter-fat .filter-option {
-  padding-top: 3px;
-  padding-left: 3px;
-}
-
 .filter-fat {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
+  margin-bottom: 16px;
   padding: 0;
 }
 
 .filter-fat legend {
-  width: 103px;
-  min-height: 16px;
   margin: 0;
   margin-bottom: 5px;
   margin-left: 13px;
@@ -2073,13 +2081,34 @@ a.submenu-new {
 }
 
 .filter-fat ul {
+  font-size: 16px;
+  line-height: 18px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 415px;
-  min-height: 36px;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  padding-right: 12px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.filter-fat .filter-option {
+  padding-top: 11px;
+  padding-bottom: 8px;
+  padding-left: 45px;
+  margin-right: 5px;
+}
+
+.filter-input-radio {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.filter-input-radio + label {
+  position: relative;
+  cursor: pointer;
 }
 
 .filter-input-radio + label::before {
@@ -2089,7 +2118,7 @@ a.submenu-new {
   width: 16px;
   height: 16px;
   content: "";
-  opacity: .8;
+  opacity: 0.8;
   border: 3px solid #fff;
   border-radius: 50%;
 }
@@ -2101,35 +2130,28 @@ a.submenu-new {
   width: 8px;
   height: 8px;
   content: "";
-  opacity: .8;
+  opacity: 0.8;
   border-radius: 50%;
   background-color: #fff;
 }
 
-.filter-input-radio + label:hover::before,
-.filter-input-radio + label:focus::before,
-.filter-input-radio:checked + label:hover::after,
-.filter-input-radio:checked + label:focus::after {
+.filter-input-radio:hover + label::before,
+.filter-input-radio:focus + label::before,
+.filter-input-radio:checked:hover + label::after,
+.filter-input-radio:checked:focus + label::after {
   opacity: 1;
-}
-
-.filter-wrapper {
-  display: flex;
-  margin: 0;
-  margin-top: 18px;
-  padding: 0;
 }
 
 .filter-filler {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   margin: 0;
+  margin-right: 15px;
   padding: 0;
 }
 
 .filter-filler legend {
-  width: 251px;
-  min-height: 16px;
   margin: 0;
   margin-bottom: 5px;
   margin-left: 16px;
@@ -2137,32 +2159,33 @@ a.submenu-new {
 }
 
 .filter-filler ul {
-  position: relative;
+  font-size: 16px;
+  line-height: 18px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 702px;
-  min-height: 36px;
+  flex-wrap: wrap;
   margin: 0;
-  margin-right: 14px;
-  padding: 0;
-}
-
-.filter-filler .filter-option:first-child {
-  margin-left: 40px;
-}
-
-.filter-filler .filter-option:last-child {
-  margin-right: 18px;
+  padding-right: 14px;
+  padding-left: 0;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 .filter-filler .filter-option {
-  padding-left: 7px;
+  padding-top: 11px;
+  padding-bottom: 8px;
+  padding-left: 48px;
+  margin-right: 6px;
 }
 
-.filter-option label {
+.filter-input-checkbox {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.filter-input-checkbox + label {
   position: relative;
-  display: block;
   cursor: pointer;
 }
 
@@ -2180,8 +2203,8 @@ a.submenu-new {
   background-size: 22px 21px;
 }
 
-.filter-input-checkbox + label:hover::before,
-.filter-input-checkbox + label:focus::before {
+.filter-input-checkbox:hover + label::before,
+.filter-input-checkbox:focus + label::before {
   opacity: 1;
 }
 
@@ -2199,56 +2222,60 @@ a.submenu-new {
   background-size: 26px 21px;
 }
 
-.filter-input-checkbox:checked + label:hover::after,
-.filter-input-checkbox:checked + label:focus::after {
+.filter-input-checkbox:checked:hover + label::after,
+.filter-input-checkbox:checked:focus + label::after {
   background-image: url("../img/checkbox.svg");
 }
 
-.filter-input:disabled+label {
+.filter-input:disabled + label {
   opacity: 0.4;
+}
+
+.filter-input:disabled + label::before,
+.filter-input:disabled:hover + label::before,
+.filter-input:disabled:focus + label::before,
+.filter-input:disabled + label::after,
+.filter-input:disabled:hover + label::after,
+.filter-input:disabled:focus + label::after {
+  opacity: 0.6;
 }
 
 .filter-button {
   font-size: 16px;
   font-weight: 500;
   line-height: 18px;
-  width: 144px;
-  height: 36px;
-  margin: 0;
-  margin-top: 21px;
-  padding: 0;
+  margin-top: 22px;
+  padding: 8px 29px 8px 29px;
   cursor: pointer;
   color: #fff;
-  border-width: 2px;
-  border-style: solid;
-  border-color: #fff;
+  border: none;
   border-radius: 20px;
+  outline: none;
   background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: inset 0 0 0 2px #fff;
 }
 
 .filter-button:hover,
 .filter-button:focus {
   color: #323232;
-  border: none;
-  outline: none;
   background-color: #fbfcfb;
 }
 
 .filter-button:active {
-  border: none;
   background-color: #eaeaea;
   box-shadow: inset 0 2px 1px 0 #696969;
 }
 
 .catalog {
   width: 1172px;
-  margin: -6px -13px 40px -13px;
+  margin: -6px -13px 0 -13px;
 }
 
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
   margin: 0;
+  margin-bottom: 31px;
   padding: 0;
 }
 
@@ -2258,7 +2285,6 @@ a.submenu-new {
   flex-direction: column;
   width: 293px;
   margin: 0;
-  margin-bottom: 31px;
   padding: 0;
 }
 
@@ -2292,8 +2318,8 @@ a.submenu-new {
 
 .catalog-item:hover {
   z-index: 1;
-  margin-bottom: -43px;
-  padding-bottom: 43px;
+  margin-bottom: -74px;
+  padding-bottom: 74px;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.2);
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.08);
@@ -2320,7 +2346,7 @@ a.submenu-new {
   justify-content: flex-end;
   flex-wrap: wrap;
   margin: 0;
-  margin-top: 49px;
+  margin-top: 48px;
 }
 
 .pagination-item a {
@@ -2328,11 +2354,11 @@ a.submenu-new {
   font-weight: 500;
   line-height: 18px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 26px;
-  height: 26px;
   margin-left: 3px;
+  padding-top: 5px;
+  padding-right: 9px;
+  padding-bottom: 2px;
+  padding-left: 8px;
   color: #fff;
   outline: none;
   border-radius: 50%;
@@ -2413,6 +2439,7 @@ a.submenu-new {
 
 .inner-page .main-footer {
   position: relative;
+  margin-top: 42px;
 }
 
 .inner-page .main-footer:after {

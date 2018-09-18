@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>Каталог Gllacy Shop</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/normalize.min.css">
     <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body class="inner-page">
@@ -19,8 +19,8 @@
             <li class="submenu-link navigation-current">
               <a class="navigation-link" href="#"><b><span>Каталог</span></b></a>
               <ul class="submenu list-style">
-                <li><a class="submenu-new" href="#">Новинки</a></li>
-                <li><a href="catalog.html">Сливочное</a></li>
+                <li class="submenu-new"><a href="#">Новинки</a></li>
+                <li class="submenu-current"><a>Сливочное</a></li>
                 <li><a href="#">Щербеты</a></li>
                 <li><a href="#">Фруктовый лед</a></li>
                 <li><a href="#">Мелорин</a></li>
@@ -121,9 +121,9 @@
         <h2 class="visually-hidden">Фильтр товаров</h2>
         <form class="filter" action="https://echo.htmlacademy.ru" method="get">
           <div class="filter-sorting">
-            <label class="legend" for="filter-sorting-id">Сортировка:</label>
+            <label class="legend">Сортировка:</label>
             <div class="sorting-select">
-              <select name="sorting" id="filter-sorting-id">
+              <select name="sorting">
                 <option value="по популярности" selected>по популярности</option>
                 <option value="сначала недорогие">сначала недорогие</option>
                 <option value="сначала дорогие">сначала дорогие</option>
@@ -141,6 +141,7 @@
               <div class="toggle toggle-max"></div>
             </div>
           </div>
+
           <fieldset class="filter-fat">
             <legend>Жирность:</legend>
             <ul class="list-style">
@@ -162,34 +163,33 @@
               </li>
             </ul>
           </fieldset>
-          <div class="filter-wrapper">
-            <fieldset class="filter-filler">
-              <legend>Наполнители:</legend>
-              <ul class="list-style">
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" id="filter-chocolate-id" checked>
-                  <label for="filter-chocolate-id">шоколадные</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sugar" id="filter-sugar-id" checked>
-                  <label for="filter-sugar-id">сахарные присыпки</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="fruit" id="filter-fruit-id">
-                  <label for="filter-fruit-id">фрукты</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="cyrup" id="filter-cyrup-id">
-                  <label for="filter-cyrup-id">сиропы</label>
-                </li>
-                <li class="filter-option">
-                  <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jam" id="filter-jam-id">
-                  <label for="filter-jam-id">джемы</label>
-                </li>
-              </ul>
-            </fieldset>
-            <button class="filter-button" type="submit">Применить</button>
-          </div>
+
+          <fieldset class="filter-filler">
+            <legend>Наполнители:</legend>
+            <ul class="list-style">
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="chocolate" id="filter-chocolate-id" checked>
+                <label for="filter-chocolate-id">шоколадные</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="sugar" id="filter-sugar-id" checked>
+                <label for="filter-sugar-id">сахарные присыпки</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="fruit" id="filter-fruit-id">
+                <label for="filter-fruit-id">фрукты</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="cyrup" id="filter-cyrup-id">
+                <label for="filter-cyrup-id">сиропы</label>
+              </li>
+              <li class="filter-option">
+                <input class="visually-hidden filter-input filter-input-checkbox" type="checkbox" name="jam" id="filter-jam-id">
+                <label for="filter-jam-id">джемы</label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="filter-button" type="submit">Применить</button>
         </form>
       </section>
 
